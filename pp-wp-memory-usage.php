@@ -12,16 +12,15 @@
 namespace WordPress\Plugins\PpWpMemoryUsage;
 
 class MemoryUsage {
-    public $memory = null;
+    protected $memory = null;
 
-    public function __construct($init = false) {
-        if($init === true) {
-            $this->init();
-        }
+    public function __construct() {
+        $this->init();
     }
 
     public function init() {
         $this->memory = array();
+
         $this->getMemoryLimit();
         $this->getMemoryUsage();
         $this->getMemoryPercentage();
@@ -51,7 +50,7 @@ class MemoryUsage {
             $this->memory['percent'] = \round(\trim(\str_ireplace(' MB', '', $this->memory['usage'])) / \trim(\str_ireplace(' MB', '', $this->memory['limit'])) * 100, 0);
 
             /**
-             * If the bar is tp small we move the text outside
+             * If the bar is too small we move the text outside
              */
             $this->memory['percent_pos'] = '';
 
@@ -95,11 +94,11 @@ class MemoryUsage {
         }
     }
 
-    function addDashboardWidget() {
+    public function addDashboardWidget() {
         \wp_add_dashboard_widget('pp_memory_dashboard', \__('Memory Usage Overview'), array($this, 'renderDashboardWidget'));
     }
 
-    function addFooter($content) {
+    public function addFooter($content) {
         $content .= \sprintf(\__(' | Memory Usage : %1$s of %2$s (%3$s%%)'), $this->memory['usage'], $this->memory['limit'], $this->memory['percent']);
 
         return $content;
@@ -110,10 +109,9 @@ class MemoryUsage {
  * Start the plugin, only in backend
  */
 function intializePlugin() {
-    new \WordPress\Plugins\PpWpMemoryUsage\MemoryUsage(true);
+    new \WordPress\Plugins\PpWpMemoryUsage\MemoryUsage;
 }
 
 if(\is_admin()) {
     intializePlugin();
-//    \add_action('wp_loaded', \create_function('', '$memory = new WordPress\Plugins\PpWpMemoryUsage\MemoryUsage(true);'), 9999);
-} // END if(\is_admin())
+}

@@ -14,12 +14,30 @@ namespace WordPress\Plugins\PpWpMemoryUsage;
 class MemoryUsage {
     protected $memory = null;
 
+    /**
+     * Textdomain
+     *
+     * @var string
+     */
+    private $textDomain = null;
+
+    /**
+     * Localization Directory
+     *
+     * @var string
+     */
+    private $localizationDirectory = null;
+
     public function __construct() {
-        $this->init();
+        /**
+         * Initializing Variables
+         */
+        $this->memory = array();
+        $this->textDomain = 'pp-wp-basic-security';
+        $this->localizationDirectory = \basename(\dirname(__FILE__)) . '/l10n/';
     }
 
     public function init() {
-        $this->memory = array();
 
         $this->getMemoryLimit();
         $this->getMemoryUsage();
@@ -99,7 +117,11 @@ class MemoryUsage {
     }
 
     public function addFooter($content) {
-        $content .= \sprintf(\__(' | Memory Usage : %1$s of %2$s (%3$s%%)'), $this->memory['usage'], $this->memory['limit'], $this->memory['percent']);
+        $content .= \sprintf(\__(' | Memory Usage: %1$s of %2$s (%3$s%%)'),
+            $this->memory['usage'],
+            $this->memory['limit'],
+            $this->memory['percent']
+        );
 
         return $content;
     }
@@ -109,7 +131,9 @@ class MemoryUsage {
  * Start the plugin, only in backend
  */
 function intializePlugin() {
-    new \WordPress\Plugins\PpWpMemoryUsage\MemoryUsage;
+    $memoryUsage = new \WordPress\Plugins\PpWpMemoryUsage\MemoryUsage;
+
+    $memoryUsage->init();
 }
 
 if(\is_admin()) {

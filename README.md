@@ -1,2 +1,1 @@
-# pp-wp-memory-usage
-WP Memory Usage
+# PP WP Memory Usage

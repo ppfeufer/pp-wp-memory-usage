@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Memory Usage\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-08 11:41+0000\n"
+"PO-Revision-Date: 2019-04-08 11:41+0000\n"
+"Last-Translator: ppfeufer <info@ppfeufer.de>\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-5.2-beta1-45108"
+
+#: pp-wp-memory-usage.php:49 pp-wp-memory-usage.php:59
+msgid "N/A"
+msgstr "N/A"
+
+#: pp-wp-memory-usage.php:49 pp-wp-memory-usage.php:59
+msgid " MB"
+msgstr "MB"
+
+#: pp-wp-memory-usage.php:93
+msgid "PHP Version"
+msgstr "PHP Version"
+
+#: pp-wp-memory-usage.php:93
+#, php-format
+msgid "%1$s Bit OS"
+msgstr "%1$s Bit Betriebssystem"
+
+#: pp-wp-memory-usage.php:94
+msgid "Memory Limit"
+msgstr "Speicher Limit"
+
+#: pp-wp-memory-usage.php:95
+msgid "Memory Usage"
+msgstr "Speicher Auslastung"
+
+#: pp-wp-memory-usage.php:112
+msgid "Memory Usage Overview"
+msgstr "Übersicht Speicher Auslastung"
+
+#: pp-wp-memory-usage.php:116
+#, php-format
+msgid " | Memory Usage: %1$s of %2$s (%3$s%%)"
+msgstr " | Speicher Auslastung: %1$s of %2$s (%3$s%%)"
+
+#. Name of the plugin
+msgid "WordPress Memory Usage"
+msgstr "WordPress Memory Usage"
+
+#. Description of the plugin
+msgid ""
+"Show up the memory limit and current memory usage in the dashboard and admin "
+"footer"
+msgstr ""
+"Zeigt die aktuelle Speicher Auslastung in einem Dashboard Widget und im "
+"Admin Fuß an"
+
+#. Author of the plugin
+msgid "H.-Peter Pfeufer"
+msgstr "H.-Peter Pfeufer"
+
+#. Author URI of the plugin
+msgid "https://ppfeufer.de"
+msgstr "https://ppfeufer.de"

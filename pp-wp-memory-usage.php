@@ -5,7 +5,7 @@
  * Description: Show up the memory limit and current memory usage in the dashboard and admin footer
  * Version: 1.0.0
  * Author: H.-Peter Pfeufer
- * Author URI: http://ppfeufer.de
+ * Author URI: https://ppfeufer.de
  * License: GPLv2
  */
 
@@ -14,31 +14,18 @@ namespace WordPress\Plugins\PpWpMemoryUsage;
 class MemoryUsage {
     protected $memory = null;
 
-    /**
-     * Textdomain
-     *
-     * @var string
-     */
-    private $textDomain = null;
-
-    /**
-     * Localization Directory
-     *
-     * @var string
-     */
-    private $localizationDirectory = null;
-
     public function __construct() {
         /**
          * Initializing Variables
          */
+        /**
+         * Initializing Variables
+         */
         $this->memory = array();
-        $this->textDomain = 'pp-wp-basic-security';
-        $this->localizationDirectory = \basename(\dirname(__FILE__)) . '/l10n/';
     }
 
     public function init() {
-
+        $this->loadTextDomain();
         $this->getMemoryLimit();
         $this->getMemoryUsage();
         $this->getMemoryPercentage();
@@ -47,10 +34,19 @@ class MemoryUsage {
         \add_filter('admin_footer_text', array($this, 'addFooter'));
     }
 
+    /**
+     * loading text domain
+     */
+    public function loadTextDomain() {
+        if(\function_exists('\load_plugin_textdomain')) {
+            \load_plugin_textdomain('pp-wp-memory-usage', false, \basename(\dirname(__FILE__)) . '/l10n/');
+        }
+    }
+
     private function getMemoryLimit() {
         $memoryLimit = (int) \ini_get('memory_limit');
 
-        $this->memory['limit'] = (empty($memoryLimit)) ? \__('N/A') : $memoryLimit . \__(' MB');
+        $this->memory['limit'] = (empty($memoryLimit)) ? \__('N/A', 'pp-wp-memory-usage') : $memoryLimit . \__(' MB', 'pp-wp-memory-usage');
     }
 
     private function getMemoryUsage() {
@@ -60,7 +56,7 @@ class MemoryUsage {
             $memoryUsage = \round(\memory_get_usage() / 1024 / 1024, 2);
         }
 
-        $this->memory['usage'] = (empty($memoryUsage)) ? \__('N/A') : $memoryUsage . \__(' MB');
+        $this->memory['usage'] = (empty($memoryUsage)) ? \__('N/A', 'pp-wp-memory-usage') : $memoryUsage . \__(' MB', 'pp-wp-memory-usage');
     }
 
     private function getMemoryPercentage() {
@@ -94,9 +90,9 @@ class MemoryUsage {
     public function renderDashboardWidget() {
         ?>
         <ul>
-            <li><strong><?php \_e('PHP Version'); ?></strong> : <span><?php echo \PHP_VERSION; ?>&nbsp;/&nbsp;<?php echo \sprintf(\__('%1$s Bit OS'), \PHP_INT_SIZE * 8); ?></span></li>
-            <li><strong><?php \_e('Memory Limit'); ?></strong> : <span><?php echo $this->memory['limit']; ?></span></li>
-            <li><strong><?php \_e('Memory Usage'); ?></strong> : <span><?php echo $this->memory['usage']; ?></span></li>
+            <li><strong><?php \_e('PHP Version', 'pp-wp-memory-usage'); ?></strong> : <span><?php echo \PHP_VERSION; ?>&nbsp;/&nbsp;<?php echo \sprintf(\__('%1$s Bit OS', 'pp-wp-memory-usage'), \PHP_INT_SIZE * 8); ?></span></li>
+            <li><strong><?php \_e('Memory Limit', 'pp-wp-memory-usage'); ?></strong> : <span><?php echo $this->memory['limit']; ?></span></li>
+            <li><strong><?php \_e('Memory Usage', 'pp-wp-memory-usage'); ?></strong> : <span><?php echo $this->memory['usage']; ?></span></li>
         </ul>
         <?php
         if(!empty($this->memory['percent'])) {
@@ -113,11 +109,11 @@ class MemoryUsage {
     }
 
     public function addDashboardWidget() {
-        \wp_add_dashboard_widget('pp_memory_dashboard', \__('Memory Usage Overview'), array($this, 'renderDashboardWidget'));
+        \wp_add_dashboard_widget('pp_memory_dashboard', \__('Memory Usage Overview', 'pp-wp-memory-usage'), array($this, 'renderDashboardWidget'));
     }
 
     public function addFooter($content) {
-        $content .= \sprintf(\__(' | Memory Usage: %1$s of %2$s (%3$s%%)'),
+        $content .= \sprintf(\__(' | Memory Usage: %1$s of %2$s (%3$s%%)', 'pp-wp-memory-usage'),
             $this->memory['usage'],
             $this->memory['limit'],
             $this->memory['percent']

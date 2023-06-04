@@ -16,36 +16,36 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 "X-Loco-Version: 2.2.2; wp-5.2-beta1-45108\n"
 
-#: pp-wp-memory-usage.php:49 pp-wp-memory-usage.php:59
+#: MemoryUsage.php:49 MemoryUsage.php:59
 msgid "N/A"
 msgstr "N/A"
 
-#: pp-wp-memory-usage.php:49 pp-wp-memory-usage.php:59
+#: MemoryUsage.php:49 MemoryUsage.php:59
 msgid " MB"
 msgstr " MB"
 
-#: pp-wp-memory-usage.php:93
+#: MemoryUsage.php:93
 msgid "PHP Version"
 msgstr "PHP Version"
 
-#: pp-wp-memory-usage.php:93
+#: MemoryUsage.php:93
 #, php-format
 msgid "%1$s Bit OS"
 msgstr "%1$s Bit Betriebssystem"
 
-#: pp-wp-memory-usage.php:94
+#: MemoryUsage.php:94
 msgid "Memory Limit"
 msgstr "Speicher Limit"
 
-#: pp-wp-memory-usage.php:95
+#: MemoryUsage.php:95
 msgid "Memory Usage"
 msgstr "Speicher Auslastung"
 
-#: pp-wp-memory-usage.php:112
+#: MemoryUsage.php:112
 msgid "Memory Usage Overview"
 msgstr "Übersicht Speicher Auslastung"
 
-#: pp-wp-memory-usage.php:116
+#: MemoryUsage.php:116
 #, php-format
 msgid " | Memory Usage: %1$s of %2$s (%3$s%%)"
 msgstr " | Speicher Auslastung: %1$s of %2$s (%3$s%%)"
@@ -63,7 +63,7 @@ msgstr ""
 "Admin Fuß an"
 
 #. Author of the plugin
-msgid "H.-Peter Pfeufer"
+msgid "H. Peter Pfeufer"
 msgstr "H.-Peter Pfeufer"
 
 #. Author URI of the plugin

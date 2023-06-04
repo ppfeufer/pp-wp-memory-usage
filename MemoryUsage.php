@@ -4,7 +4,7 @@
  * Plugin URI:
  * Description: Show up the memory limit and current memory usage in the dashboard and admin footer
  * Version: 1.0.0
- * Author: H.-Peter Pfeufer
+ * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
  * License: GPLv2
  */

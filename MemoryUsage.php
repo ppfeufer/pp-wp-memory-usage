@@ -7,6 +7,8 @@
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
  * License: GPLv2
+ * Text Domain: pp-wp-memory-usage
+ * Domain Path: /l10n
  */
 
 namespace WordPress\Plugins\PpWpMemoryUsage;

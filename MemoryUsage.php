@@ -3,7 +3,7 @@
  * Plugin Name: WordPress Memory Usage
  * Plugin URI:
  * Description: Show up the memory limit and current memory usage in the dashboard and admin footer
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
  * License: GPLv2
@@ -30,13 +30,13 @@ class MemoryUsage {
      * loading text domain
      */
     public function loadTextDomain(): void {
-        if(function_exists('load_plugin_textdomain')) {
+        if (function_exists('load_plugin_textdomain')) {
             load_plugin_textdomain('pp-wp-memory-usage', false, basename(__DIR__) . '/l10n/');
         }
     }
 
     private function getMemoryLimit(): void {
-        $memoryLimit = (int) ini_get('memory_limit');
+        $memoryLimit = (int)ini_get('memory_limit');
 
         $this->memory['limit'] = (empty($memoryLimit)) ? __('N/A', 'pp-wp-memory-usage') : $memoryLimit . __(' MB', 'pp-wp-memory-usage');
     }
@@ -44,7 +44,7 @@ class MemoryUsage {
     private function getMemoryUsage(): void {
         $memoryUsage = 0;
 
-        if(function_exists('memory_get_usage')) {
+        if (function_exists('memory_get_usage')) {
             $memoryUsage = round(memory_get_usage() / 1024 / 1024, 2);
         }
 
@@ -52,7 +52,7 @@ class MemoryUsage {
     }
 
     private function getMemoryPercentage(): void {
-        if(!empty($this->memory['usage']) && !empty($this->memory['limit'])) {
+        if (!empty($this->memory['usage']) && !empty($this->memory['limit'])) {
             $this->memory['percent'] = round(trim(str_ireplace(' MB', '', $this->memory['usage'])) / trim(str_ireplace(' MB', '', $this->memory['limit'])) * 100);
 
             /**
@@ -65,15 +65,15 @@ class MemoryUsage {
              */
             $this->memory['color'] = '';
 
-            if($this->memory['percent'] > 80) {
+            if ($this->memory['percent'] > 80) {
                 $this->memory['color'] = 'background: #E66F00;';
             }
 
-            if($this->memory['percent'] > 95) {
+            if ($this->memory['percent'] > 95) {
                 $this->memory['color'] = 'background: red;';
             }
 
-            if($this->memory['percent'] < 10) {
+            if ($this->memory['percent'] < 10) {
                 $this->memory['percent_pos'] = 'margin-right: -30px; color: #444;';
             }
         }
@@ -82,16 +82,25 @@ class MemoryUsage {
     public function renderDashboardWidget(): void {
         ?>
         <ul>
-            <li><strong><?php _e('PHP Version', 'pp-wp-memory-usage'); ?></strong> : <span><?php echo PHP_VERSION; ?>&nbsp;/&nbsp;<?php echo sprintf(__('%1$s Bit OS', 'pp-wp-memory-usage'), PHP_INT_SIZE * 8); ?></span></li>
-            <li><strong><?php _e('Memory Limit', 'pp-wp-memory-usage'); ?></strong> : <span><?php echo $this->memory['limit']; ?></span></li>
-            <li><strong><?php _e('Memory Usage', 'pp-wp-memory-usage'); ?></strong> : <span><?php echo $this->memory['usage']; ?></span></li>
+            <li>
+                <strong><?php _e('PHP Version', 'pp-wp-memory-usage'); ?>:</strong>
+                <span><?php echo PHP_VERSION; ?>&nbsp;/&nbsp;<?php echo sprintf(__('%1$s Bit OS', 'pp-wp-memory-usage'), PHP_INT_SIZE * 8); ?></span>
+            </li>
+            <li>
+                <strong><?php _e('Memory Limit', 'pp-wp-memory-usage'); ?>:</strong>
+                <span><?php echo $this->memory['limit']; ?></span>
+            </li>
+            <li>
+                <strong><?php _e('Memory Usage', 'pp-wp-memory-usage'); ?>:</strong>
+                <span><?php echo $this->memory['usage']; ?></span>
+            </li>
         </ul>
         <?php
-        if(!empty($this->memory['percent'])) {
+        if (!empty($this->memory['percent'])) {
             ?>
             <div class="progressbar">
                 <div style="border:1px solid rgb(223 223 223); background-color: rgb(249 249 249); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px;">
-                    <div class="button-primary" style="width: <?php echo $this->memory['percent']; ?>%;<?php echo $this->memory['color']; ?>padding: 0; border-width: 0; color: #FFFFFF;text-align:right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;">
+                    <div class="button-primary" style="width: <?php echo $this->memory['percent']; ?>%;<?php echo $this->memory['color']; ?>padding: 0; border-width: 0; color: rgb(255 255 255); text-align:right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;">
                         <div style="padding:2px;<?php echo $this->memory['percent_pos']; ?>"><?php echo $this->memory['percent']; ?>%</div>
                     </div>
                 </div>
@@ -124,6 +133,6 @@ function initialize_plugin(): void {
     $memoryUsage->init();
 }
 
-if(is_admin()) {
+if (is_admin()) {
     initialize_plugin();
 }

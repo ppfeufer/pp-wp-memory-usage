@@ -1,0 +1,71 @@
+# Peter Pfeufer <info@ppfeufer.de>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Memory Usage\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-06 21:23+0000\n"
+"PO-Revision-Date: 2023-06-06 21:34+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/"
+"wordpress-plugins/pp-wp-memory-usage/de/>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+"X-Loco-Version: 2.2.2; wp-5.2-beta1-45108\n"
+
+#: MemoryUsage.php:41 MemoryUsage.php:51
+msgid " MB"
+msgstr " MB"
+
+#: MemoryUsage.php:89
+#, php-format
+msgid "%1$s Bit OS"
+msgstr "%1$s Bit Betriebssystem"
+
+#. Description of the plugin
+msgid ""
+"Display the memory limit and current memory usage in the dashboard and admin "
+"footer"
+msgstr ""
+"Zeigt die aktuelle Speichernutzung in einem Dashboard Widget und im Admin "
+"Fuß an"
+
+#. Author of the plugin
+msgid "H. Peter Pfeufer"
+msgstr "H. Peter Pfeufer"
+
+#. Author URI of the plugin
+msgid "https://ppfeufer.de"
+msgstr "https://ppfeufer.de"
+
+#: MemoryUsage.php:92
+msgid "Memory Limit"
+msgstr "Speicherlimit"
+
+#: MemoryUsage.php:96
+msgid "Memory Usage"
+msgstr "Speichernutzung"
+
+#: MemoryUsage.php:117
+msgid "Memory Usage Overview"
+msgstr "Übersicht Speichernutzung"
+
+#: MemoryUsage.php:123
+#, php-format
+msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
+msgstr "Speichernutzung: %1$s of %2$s (%3$s%%)"
+
+#: MemoryUsage.php:41 MemoryUsage.php:51
+msgid "N/A"
+msgstr "-"
+
+#: MemoryUsage.php:88
+msgid "PHP Version"
+msgstr "PHP Version"
+
+#. Name of the plugin
+msgid "WordPress Memory Usage"
+msgstr "WordPress Memory Usage"

@@ -4,10 +4,10 @@ msgstr ""
 "Project-Id-Version: WordPress Memory Usage\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-08 11:41+0000\n"
-"PO-Revision-Date: 2023-06-04 18:41+0000\n"
+"PO-Revision-Date: 2023-06-05 21:00+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: German <https://weblate.ppfeufer.de/projects/"
-"wordpress-plugins/pp-wp-memory-usage/de/>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-"
+"plugins/pp-wp-memory-usage/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,7 +64,7 @@ msgstr ""
 
 #. Author of the plugin
 msgid "H. Peter Pfeufer"
-msgstr "H.-Peter Pfeufer"
+msgstr "H. Peter Pfeufer"
 
 #. Author URI of the plugin
 msgid "https://ppfeufer.de"

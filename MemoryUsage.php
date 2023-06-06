@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WordPress Memory Usage
  * Plugin URI:
- * Description: Show up the memory limit and current memory usage in the dashboard and admin footer
+ * Description: Display the memory limit and current memory usage in the dashboard and admin footer
  * Version: 1.0.1
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
@@ -58,25 +58,25 @@ class MemoryUsage {
             );
 
             /**
-             * If the bar is too small we move the text outside
+             * If the bar is too small, we move the text outside
              */
             $this->memory['percent_pos'] = '';
 
             /**
-             * In case we are in our limits take the admin color
+             * In case we are in our limits, take the admin color
              */
             $this->memory['color'] = '';
 
             if ($this->memory['percent'] > 80) {
-                $this->memory['color'] = 'background: #E66F00;';
+                $this->memory['color'] = 'background: rgb(230 111 0);';
             }
 
             if ($this->memory['percent'] > 95) {
-                $this->memory['color'] = 'background: red;';
+                $this->memory['color'] = 'background: rgb(255 0 0);';
             }
 
             if ($this->memory['percent'] < 10) {
-                $this->memory['percent_pos'] = 'margin-right: -30px; color: #444;';
+                $this->memory['percent_pos'] = 'margin-right: -30px; color: rgb(68 68 68);';
             }
         }
     }
@@ -102,8 +102,8 @@ class MemoryUsage {
             ?>
             <div class="progressbar">
                 <div style="border:1px solid rgb(223 223 223); background-color: rgb(249 249 249); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px;">
-                    <div class="button-primary" style="width: <?php echo $this->memory['percent']; ?>%;<?php echo $this->memory['color']; ?>padding: 0; border-width: 0; color: rgb(255 255 255); text-align:right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;">
-                        <div style="padding:2px;<?php echo $this->memory['percent_pos']; ?>"><?php echo $this->memory['percent']; ?>%</div>
+                    <div class="button-primary" style="width: <?php echo $this->memory['percent']; ?>%; <?php echo $this->memory['color']; ?> padding: 0; border-width: 0; color: rgb(255 255 255); text-align: right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;">
+                        <div style="padding: 2px; <?php echo $this->memory['percent_pos']; ?>"><?php echo $this->memory['percent']; ?>%</div>
                     </div>
                 </div>
             </div>
@@ -112,11 +112,15 @@ class MemoryUsage {
     }
 
     public function addDashboardWidget(): void {
-        wp_add_dashboard_widget('pp_memory_dashboard', __('Memory Usage Overview', 'pp-wp-memory-usage'), [$this, 'renderDashboardWidget']);
+        wp_add_dashboard_widget(
+            'pp_memory_dashboard',
+            __('Memory Usage Overview', 'pp-wp-memory-usage'),
+            [$this, 'renderDashboardWidget']
+        );
     }
 
     public function addFooter(string $content): string {
-        $content .= sprintf(__(' | Memory Usage: %1$s of %2$s (%3$s%%)', 'pp-wp-memory-usage'),
+        $content .= ' | ' . sprintf(__('Memory Usage: %1$s of %2$s (%3$s%%)', 'pp-wp-memory-usage'),
             $this->memory['usage'],
             $this->memory['limit'],
             $this->memory['percent']

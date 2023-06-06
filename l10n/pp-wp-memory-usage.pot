@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-08 11:41+0000\n"
+"POT-Creation-Date: 2023-06-06 21:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,47 +15,18 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.2; wp-5.2-beta1-45108"
 
-#: MemoryUsage.php:49 MemoryUsage.php:59
-msgid "N/A"
-msgstr ""
-
-#: MemoryUsage.php:49 MemoryUsage.php:59
+#: MemoryUsage.php:41 MemoryUsage.php:51
 msgid " MB"
 msgstr ""
 
-#: MemoryUsage.php:93
-msgid "PHP Version"
-msgstr ""
-
-#: MemoryUsage.php:93
+#: MemoryUsage.php:89
 #, php-format
 msgid "%1$s Bit OS"
 msgstr ""
 
-#: MemoryUsage.php:94
-msgid "Memory Limit"
-msgstr ""
-
-#: MemoryUsage.php:95
-msgid "Memory Usage"
-msgstr ""
-
-#: MemoryUsage.php:112
-msgid "Memory Usage Overview"
-msgstr ""
-
-#: MemoryUsage.php:116
-#, php-format
-msgid " | Memory Usage: %1$s of %2$s (%3$s%%)"
-msgstr ""
-
-#. Name of the plugin
-msgid "WordPress Memory Usage"
-msgstr ""
-
 #. Description of the plugin
 msgid ""
-"Show up the memory limit and current memory usage in the dashboard and admin "
+"Display the memory limit and current memory usage in the dashboard and admin "
 "footer"
 msgstr ""
 
@@ -65,4 +36,33 @@ msgstr ""
 
 #. Author URI of the plugin
 msgid "https://ppfeufer.de"
+msgstr ""
+
+#: MemoryUsage.php:92
+msgid "Memory Limit"
+msgstr ""
+
+#: MemoryUsage.php:96
+msgid "Memory Usage"
+msgstr ""
+
+#: MemoryUsage.php:117
+msgid "Memory Usage Overview"
+msgstr ""
+
+#: MemoryUsage.php:123
+#, php-format
+msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
+msgstr ""
+
+#: MemoryUsage.php:41 MemoryUsage.php:51
+msgid "N/A"
+msgstr ""
+
+#: MemoryUsage.php:88
+msgid "PHP Version"
+msgstr ""
+
+#. Name of the plugin
+msgid "WordPress Memory Usage"
 msgstr ""

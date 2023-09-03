@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-06 21:23+0000\n"
+"POT-Creation-Date: 2023-09-03 08:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,13 +13,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.2.2; wp-5.2-beta1-45108"
+"X-Loco-Version: 2.6.6; wp-6.4-alpha-56509\n"
+"X-Domain: pp-wp-memory-usage"
 
-#: MemoryUsage.php:41 MemoryUsage.php:51
+#: MemoryUsage.php:43 MemoryUsage.php:55
 msgid " MB"
 msgstr ""
 
-#: MemoryUsage.php:89
+#: MemoryUsage.php:93
 #, php-format
 msgid "%1$s Bit OS"
 msgstr ""
@@ -38,28 +39,28 @@ msgstr ""
 msgid "https://ppfeufer.de"
 msgstr ""
 
-#: MemoryUsage.php:92
+#: MemoryUsage.php:96
 msgid "Memory Limit"
 msgstr ""
 
-#: MemoryUsage.php:96
+#: MemoryUsage.php:100
 msgid "Memory Usage"
 msgstr ""
 
-#: MemoryUsage.php:117
+#: MemoryUsage.php:121
 msgid "Memory Usage Overview"
 msgstr ""
 
-#: MemoryUsage.php:123
+#: MemoryUsage.php:127
 #, php-format
 msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
 msgstr ""
 
-#: MemoryUsage.php:41 MemoryUsage.php:51
+#: MemoryUsage.php:42 MemoryUsage.php:54
 msgid "N/A"
 msgstr ""
 
-#: MemoryUsage.php:88
+#: MemoryUsage.php:92
 msgid "PHP Version"
 msgstr ""
 

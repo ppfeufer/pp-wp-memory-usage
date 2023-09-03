@@ -38,7 +38,9 @@ class MemoryUsage {
     private function getMemoryLimit(): void {
         $memoryLimit = (int)ini_get('memory_limit');
 
-        $this->memory['limit'] = (empty($memoryLimit)) ? __('N/A', 'pp-wp-memory-usage') : $memoryLimit . __(' MB', 'pp-wp-memory-usage');
+        $this->memory['limit'] = (empty($memoryLimit))
+            ? __('N/A', 'pp-wp-memory-usage')
+            : $memoryLimit . __(' MB', 'pp-wp-memory-usage');
     }
 
     private function getMemoryUsage(): void {
@@ -48,7 +50,9 @@ class MemoryUsage {
             $memoryUsage = round(memory_get_usage() / 1024 / 1024, 2);
         }
 
-        $this->memory['usage'] = (empty($memoryUsage)) ? __('N/A', 'pp-wp-memory-usage') : $memoryUsage . __(' MB', 'pp-wp-memory-usage');
+        $this->memory['usage'] = (empty($memoryUsage))
+            ? __('N/A', 'pp-wp-memory-usage')
+            : $memoryUsage . __(' MB', 'pp-wp-memory-usage');
     }
 
     private function getMemoryPercentage(): void {
@@ -120,7 +124,10 @@ class MemoryUsage {
     }
 
     public function addFooter(string $content): string {
-        $content .= ' | ' . sprintf(__('Memory Usage: %1$s of %2$s (%3$s%%)', 'pp-wp-memory-usage'),
+        $content .= ' | ' . sprintf(__(
+                'Memory Usage: %1$s of %2$s (%3$s%%)',
+                'pp-wp-memory-usage'
+            ),
             $this->memory['usage'],
             $this->memory['limit'],
             $this->memory['percent']

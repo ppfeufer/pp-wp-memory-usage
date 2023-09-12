@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-03 08:35+0000\n"
+"POT-Creation-Date: 2023-09-12 16:13+0000\n"
 "PO-Revision-Date: 2023-07-05 12:19+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/wordpress-"
@@ -17,11 +17,11 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 "X-Loco-Version: 2.2.2; wp-5.2-beta1-45108\n"
 
-#: MemoryUsage.php:43 MemoryUsage.php:55
+#: MemoryUsage.php:86 MemoryUsage.php:103
 msgid " MB"
 msgstr ""
 
-#: MemoryUsage.php:93
+#: MemoryUsage.php:164
 #, php-format
 msgid "%1$s Bit OS"
 msgstr ""
@@ -40,28 +40,28 @@ msgstr "H. Peter Pfeufer"
 msgid "https://ppfeufer.de"
 msgstr "https://ppfeufer.de"
 
-#: MemoryUsage.php:96
+#: MemoryUsage.php:172
 msgid "Memory Limit"
 msgstr ""
 
-#: MemoryUsage.php:100
+#: MemoryUsage.php:178
 msgid "Memory Usage"
 msgstr ""
 
-#: MemoryUsage.php:121
+#: MemoryUsage.php:205
 msgid "Memory Usage Overview"
 msgstr ""
 
-#: MemoryUsage.php:127
+#: MemoryUsage.php:219
 #, php-format
 msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
 msgstr ""
 
-#: MemoryUsage.php:42 MemoryUsage.php:54
+#: MemoryUsage.php:85 MemoryUsage.php:102
 msgid "N/A"
 msgstr ""
 
-#: MemoryUsage.php:92
+#: MemoryUsage.php:158
 msgid "PHP Version"
 msgstr ""
 

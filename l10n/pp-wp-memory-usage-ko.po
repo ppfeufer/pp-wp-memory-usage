@@ -1,20 +1,21 @@
-#, fuzzy
+# Peter Pfeufer <info@ppfeufer.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-12 16:13+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2023-09-08 20:34+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
+"Language-Team: Korean <https://weblate.ppfeufer.de/projects/wordpress-"
+"plugins/pp-wp-memory-usage/ko/>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.0\n"
 "X-Loco-Version: 2.6.6; wp-6.4-alpha-56509\n"
-"X-Domain: pp-wp-memory-usage"
+"X-Domain: pp-wp-memory-usage\n"
 
 #: MemoryUsage.php:86 MemoryUsage.php:103
 msgid " MB"
@@ -33,11 +34,11 @@ msgstr ""
 
 #. Author of the plugin
 msgid "H. Peter Pfeufer"
-msgstr ""
+msgstr "H. Peter Pfeufer"
 
 #. Author URI of the plugin
 msgid "https://ppfeufer.de"
-msgstr ""
+msgstr "https://ppfeufer.de"
 
 #: MemoryUsage.php:172
 msgid "Memory Limit"
@@ -66,4 +67,4 @@ msgstr ""
 
 #. Name of the plugin
 msgid "WordPress Memory Usage"
-msgstr ""
+msgstr "WordPress Memory Usage"

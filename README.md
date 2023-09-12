@@ -1,5 +1,6 @@
 # PP WP Memory Usage<a name="pp-wp-memory-usage"></a>
 
+![License](https://img.shields.io/badge/license-GPLv3-green "License")
 [![Translation status](https://weblate.ppfeufer.de/widget/wordpress-plugins/pp-wp-memory-usage/svg-badge.svg)](https://weblate.ppfeufer.de/engage/wordpress-plugins/)
 
 ______________________________________________________________________

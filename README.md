@@ -10,9 +10,15 @@ ______________________________________________________________________
 <!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
 
 - [PP WP Memory Usage](#pp-wp-memory-usage)
+  - [Minimum Requirements](#minimum-requirements)
   - [Translation Status](#translation-status)
 
 <!-- mdformat-toc end -->
+
+### Minimum Requirements<a name="minimum-requirements"></a>
+
+- WordPress 6.0
+- PHP 8.2
 
 ______________________________________________________________________
 

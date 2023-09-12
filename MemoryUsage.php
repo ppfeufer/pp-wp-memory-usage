@@ -13,6 +13,10 @@
 
 namespace WordPress\Plugins\PpWpMemoryUsage;
 
+require_once(trailingslashit(__DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php');
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
 class MemoryUsage {
     protected array $memory = [];
 
@@ -21,6 +25,7 @@ class MemoryUsage {
         $this->getMemoryLimit();
         $this->getMemoryUsage();
         $this->getMemoryPercentage();
+        $this->doUpdateCheck();
 
         add_action('wp_dashboard_setup', [$this, 'addDashboardWidget']);
         add_filter('admin_footer_text', [$this, 'addFooter']);
@@ -33,6 +38,19 @@ class MemoryUsage {
         if (function_exists('load_plugin_textdomain')) {
             load_plugin_textdomain('pp-wp-memory-usage', false, basename(__DIR__) . '/l10n/');
         }
+    }
+
+    public function doUpdateCheck(): void {
+        /**
+         * Check GitHub for updates
+         */
+        $myUpdateChecker = PucFactory::buildUpdateChecker(
+            'https://github.com/ppfeufer/pp-wp-memory-usage/',
+            __FILE__,
+            'pp-wp-memory-usage'
+        );
+
+        $myUpdateChecker->getVcsApi()->enableReleaseAssets();
     }
 
     private function getMemoryLimit(): void {

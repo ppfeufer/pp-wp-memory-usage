@@ -1,9 +1,9 @@
 <?php
 
-namespace YahnisElsts\PluginUpdateChecker\v5p2\Vcs;
+namespace WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2\Vcs;
 
-use YahnisElsts\PluginUpdateChecker\v5p2\OAuthSignature;
-use YahnisElsts\PluginUpdateChecker\v5p2\Utils;
+use WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2\OAuthSignature;
+use WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2\Utils;
 
 if ( !class_exists(BitBucketApi::class, false) ):
 

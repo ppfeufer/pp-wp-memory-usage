@@ -17,7 +17,7 @@ require_once(
     trailingslashit(value: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
 );
 
-use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+use WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 class MemoryUsage {
     /**

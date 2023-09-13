@@ -52,7 +52,6 @@ class MemoryUsage {
         if (function_exists('load_plugin_textdomain')) {
             load_plugin_textdomain(
                 domain: 'pp-wp-memory-usage',
-                deprecated: false,
                 plugin_rel_path: basename(path: __DIR__) . '/l10n/'
             );
         }

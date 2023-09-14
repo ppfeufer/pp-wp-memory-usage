@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Changed
+
+- Integrate PluginUpdateChecker into our namespace
+
 ### Removed
 
 - Redundant argument

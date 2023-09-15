@@ -1,9 +1,9 @@
 <?php
 
-namespace WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2;
+namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2;
 
-use WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory as MajorFactory;
-use WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2\PucFactory as MinorFactory;
+use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory as MajorFactory;
+use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2\PucFactory as MinorFactory;
 
 require __DIR__ . '/Puc/v5p2/Autoloader.php';
 new Autoloader();

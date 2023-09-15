@@ -1,11 +1,11 @@
 <?php
 
-namespace WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2;
+namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p2;
 
 if ( !class_exists(Autoloader::class, false) ):
 
 	class Autoloader {
-		const DEFAULT_NS_PREFIX = 'WordPress\\Plugins\\PpWpMemoryUsage\\Libs\YahnisElsts\\PluginUpdateChecker\\';
+		const DEFAULT_NS_PREFIX = 'WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\Libs\YahnisElsts\\PluginUpdateChecker\\';
 
 		private $prefix;
 		private $rootDir;

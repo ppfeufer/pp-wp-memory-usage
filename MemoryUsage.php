@@ -3,7 +3,7 @@
  * Plugin Name: WordPress Memory Usage
  * Plugin URI:
  * Description: Display the memory limit and current memory usage in the dashboard and admin footer
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
  * License: GPLv2
@@ -11,13 +11,13 @@
  * Domain Path: /l10n
  */
 
-namespace WordPress\Plugins\PpWpMemoryUsage;
+namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 require_once(
     trailingslashit(value: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
 );
 
-use WordPress\Plugins\PpWpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 class MemoryUsage {
     /**

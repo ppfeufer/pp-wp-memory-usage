@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[1.2.0\] - 2023-09-15
+
 ### Changed
 
 - Integrate PluginUpdateChecker into our namespace

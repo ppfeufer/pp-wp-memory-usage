@@ -14,7 +14,7 @@ ci:
 
     for more information, see https://pre-commit.ci
   autofix_prs: false
-  autoupdate_branch: 'development'
+  autoupdate_branch: 'master'
   autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
   autoupdate_schedule: weekly
   skip: []
@@ -70,14 +70,15 @@ repos:
             Libs/YahnisElsts/PluginUpdateChecker/
           )
 
-  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-    rev: 0.0.2
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: v15.10.3
     hooks:
       - id: stylelint
         exclude: |
           (?x)(
             .min(.css|.css.map)|
-            Libs/YahnisElsts/PluginUpdateChecker/
+            Libs/YahnisElsts/PluginUpdateChecker/ |
+            css/libs/
           )
         args:
           - --formatter=compact

@@ -1,6 +1,7 @@
 # PP WP Memory Usage<a name="pp-wp-memory-usage"></a>
 
 ![License](https://img.shields.io/badge/license-GPLv3-green "License")
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ppfeufer/pp-wp-memory-usage/master.svg)](https://results.pre-commit.ci/latest/github/ppfeufer/pp-wp-memory-usage/master)
 [![Translation status](https://weblate.ppfeufer.de/widget/wordpress-plugins/pp-wp-memory-usage/svg-badge.svg)](https://weblate.ppfeufer.de/engage/wordpress-plugins/)
 
 Adds a little widget with the current memory usage to the dashboard.

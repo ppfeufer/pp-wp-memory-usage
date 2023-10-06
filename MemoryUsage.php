@@ -14,7 +14,7 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 require_once(
-    trailingslashit(value: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
+    trailingslashit(string: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
 );
 
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
@@ -49,7 +49,7 @@ class MemoryUsage {
      * @return void
      */
     public function loadTextDomain(): void {
-        if (function_exists('load_plugin_textdomain')) {
+        if (function_exists(function: 'load_plugin_textdomain')) {
             load_plugin_textdomain(
                 domain: 'pp-wp-memory-usage',
                 plugin_rel_path: basename(path: __DIR__) . '/l10n/'

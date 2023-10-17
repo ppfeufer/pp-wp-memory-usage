@@ -14,7 +14,7 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 require_once(
-    trailingslashit(string: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
+    trailingslashit(value: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
 );
 
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;

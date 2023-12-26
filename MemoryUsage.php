@@ -14,7 +14,7 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 require_once(
-    trailingslashit(value: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
+    trailingslashit(string: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
 );
 
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
@@ -166,12 +166,14 @@ class MemoryUsage {
                     ?>
                 </span>
             </li>
+
             <li>
                 <strong>
                     <?php _e(text: 'Memory Limit', domain: 'pp-wp-memory-usage'); ?>:
                 </strong>
                 <span><?php echo $this->memory['limit']; ?></span>
             </li>
+
             <li>
                 <strong>
                     <?php _e(text: 'Memory Usage', domain: 'pp-wp-memory-usage'); ?>:
@@ -179,11 +181,12 @@ class MemoryUsage {
                 <span><?php echo $this->memory['usage']; ?></span>
             </li>
         </ul>
+
         <?php
         if (!empty($this->memory['percent'])) {
             ?>
             <div class="progressbar">
-                <div style="border:1px solid rgb(223 223 223); background-color: rgb(249 249 249); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px;">
+                <div style="border: 1px solid rgb(223 223 223); background-color: rgb(249 249 249); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px;">
                     <div class="button-primary" style="width: <?php echo $this->memory['percent']; ?>%; <?php echo $this->memory['color']; ?> padding: 0; border-width: 0; color: rgb(255 255 255); text-align: right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;">
                         <div style="padding: 2px; <?php echo $this->memory['percent_pos']; ?>"><?php echo $this->memory['percent']; ?>%</div>
                     </div>

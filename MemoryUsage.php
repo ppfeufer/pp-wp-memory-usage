@@ -58,27 +58,12 @@ class MemoryUsage {
     }
 
     /**
-     * Check GitHub for updates
-     *
-     * @return void
-     */
-    public function doUpdateCheck(): void {
-        $myUpdateChecker = PucFactory::buildUpdateChecker(
-            metadataUrl: 'https://github.com/ppfeufer/pp-wp-memory-usage/',
-            fullPath: __FILE__,
-            slug: 'pp-wp-memory-usage'
-        );
-
-        $myUpdateChecker->getVcsApi()->enableReleaseAssets();
-    }
-
-    /**
      * Get memory limit
      *
      * @return void
      */
     private function getMemoryLimit(): void {
-        $memoryLimit = (int) ini_get(option: 'memory_limit');
+        $memoryLimit = (int)ini_get(option: 'memory_limit');
 
         $this->memory['limit'] = (empty($memoryLimit))
             ? __(text: 'N/A', domain: 'pp-wp-memory-usage')
@@ -146,6 +131,21 @@ class MemoryUsage {
     }
 
     /**
+     * Check GitHub for updates
+     *
+     * @return void
+     */
+    public function doUpdateCheck(): void {
+        $myUpdateChecker = PucFactory::buildUpdateChecker(
+            metadataUrl: 'https://github.com/ppfeufer/pp-wp-memory-usage/',
+            fullPath: __FILE__,
+            slug: 'pp-wp-memory-usage'
+        );
+
+        $myUpdateChecker->getVcsApi()->enableReleaseAssets();
+    }
+
+    /**
      * Render the dashboard widget
      *
      * @return void
@@ -154,13 +154,16 @@ class MemoryUsage {
         ?>
         <ul>
             <li>
-                <strong><?php _e(text: 'PHP Version', domain: 'pp-wp-memory-usage'); ?>:</strong>
+                <strong>
+                    <?php _e(text: 'PHP Version', domain: 'pp-wp-memory-usage'); ?>:
+                </strong>
+
                 <span>
                     <?php echo PHP_VERSION; ?>
                     /
                     <?php
                     echo sprintf(
-                        __(text: '%1$s Bit OS', domain: 'pp-wp-memory-usage'),
+                        __(text: '%1$s Bit Operating System', domain: 'pp-wp-memory-usage'),
                         PHP_INT_SIZE * 8
                     );
                     ?>
@@ -171,6 +174,7 @@ class MemoryUsage {
                 <strong>
                     <?php _e(text: 'Memory Limit', domain: 'pp-wp-memory-usage'); ?>:
                 </strong>
+
                 <span><?php echo $this->memory['limit']; ?></span>
             </li>
 
@@ -178,6 +182,7 @@ class MemoryUsage {
                 <strong>
                     <?php _e(text: 'Memory Usage', domain: 'pp-wp-memory-usage'); ?>:
                 </strong>
+
                 <span><?php echo $this->memory['usage']; ?></span>
             </li>
         </ul>
@@ -187,8 +192,13 @@ class MemoryUsage {
             ?>
             <div class="progressbar">
                 <div style="border: 1px solid rgb(223 223 223); background-color: rgb(249 249 249); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px;">
-                    <div class="button-primary" style="width: <?php echo $this->memory['percent']; ?>%; <?php echo $this->memory['color']; ?> padding: 0; border-width: 0; color: rgb(255 255 255); text-align: right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;">
-                        <div style="padding: 2px; <?php echo $this->memory['percent_pos']; ?>"><?php echo $this->memory['percent']; ?>%</div>
+                    <div
+                        class="button-primary"
+                        style="width: <?php echo $this->memory['percent']; ?>%; <?php echo $this->memory['color']; ?> padding: 0; border-width: 0; color: rgb(255 255 255); text-align: right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;"
+                    >
+                        <div style="padding: 2px; <?php echo $this->memory['percent_pos']; ?>"><?php echo $this->memory['percent']; ?>
+                            %
+                        </div>
                     </div>
                 </div>
             </div>
@@ -222,16 +232,19 @@ class MemoryUsage {
                 text: 'Memory Usage: %1$s of %2$s (%3$s%%)',
                 domain: 'pp-wp-memory-usage'
             ),
-            $this->memory['usage'],
-            $this->memory['limit'],
-            $this->memory['percent']
-        );
+                $this->memory['usage'],
+                $this->memory['limit'],
+                $this->memory['percent']
+            );
 
         return $content;
     }
 }
 
-// Only initialize the plugin when the user is in the admin backend
+/**
+ * Start the plugin
+ * Only initialize the plugin when the user is in the admin backend
+ */
 if (is_admin()) {
     /**
      * Start the plugin, only in backend

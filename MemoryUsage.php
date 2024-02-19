@@ -3,7 +3,7 @@
  * Plugin Name: WordPress Memory Usage
  * Plugin URI:
  * Description: Display the memory limit and current memory usage in the dashboard and admin footer
- * Version: 1.3.1
+ * Version: 1.4.0
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
  * License: GPLv2
@@ -18,6 +18,7 @@ require_once(
 );
 
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+use WP_Admin_Bar;
 
 class MemoryUsage {
     /**
@@ -37,6 +38,19 @@ class MemoryUsage {
         $this->getMemoryPercentage();
         $this->doUpdateCheck();
 
+        if (is_admin()) {
+            $this->addAdminHooks();
+        }
+
+        add_action(hook_name: 'admin_bar_menu', callback: [$this, 'addAdminBarInfo'], priority: 999);
+    }
+
+    /**
+     * Add the admin hooks
+     *
+     * @return void
+     */
+    private function addAdminHooks(): void {
         add_action(
             hook_name: 'wp_dashboard_setup', callback: [$this, 'addDashboardWidget']
         );
@@ -66,8 +80,8 @@ class MemoryUsage {
         $memoryLimit = (int)ini_get(option: 'memory_limit');
 
         $this->memory['limit'] = (empty($memoryLimit))
-            ? __(text: 'N/A', domain: 'pp-wp-memory-usage')
-            : $memoryLimit . __(text: ' MB', domain: 'pp-wp-memory-usage');
+            ? __('N/A', 'pp-wp-memory-usage')
+            : $memoryLimit . __(' MB', 'pp-wp-memory-usage');
     }
 
     /**
@@ -83,8 +97,8 @@ class MemoryUsage {
         }
 
         $this->memory['usage'] = (empty($memoryUsage))
-            ? __(text: 'N/A', domain: 'pp-wp-memory-usage')
-            : $memoryUsage . __(text: ' MB', domain: 'pp-wp-memory-usage');
+            ? __('N/A', 'pp-wp-memory-usage')
+            : $memoryUsage . __(' MB', 'pp-wp-memory-usage');
     }
 
     /**
@@ -155,7 +169,7 @@ class MemoryUsage {
         <ul>
             <li>
                 <strong>
-                    <?php _e(text: 'PHP Version', domain: 'pp-wp-memory-usage'); ?>:
+                    <?php _e('PHP Version', 'pp-wp-memory-usage'); ?>:
                 </strong>
 
                 <span>
@@ -163,7 +177,7 @@ class MemoryUsage {
                     /
                     <?php
                     echo sprintf(
-                        __(text: '%1$s Bit Operating System', domain: 'pp-wp-memory-usage'),
+                        __('%1$s Bit Operating System', 'pp-wp-memory-usage'),
                         PHP_INT_SIZE * 8
                     );
                     ?>
@@ -172,7 +186,7 @@ class MemoryUsage {
 
             <li>
                 <strong>
-                    <?php _e(text: 'Memory Limit', domain: 'pp-wp-memory-usage'); ?>:
+                    <?php _e('Memory Limit', 'pp-wp-memory-usage'); ?>:
                 </strong>
 
                 <span><?php echo $this->memory['limit']; ?></span>
@@ -180,7 +194,7 @@ class MemoryUsage {
 
             <li>
                 <strong>
-                    <?php _e(text: 'Memory Usage', domain: 'pp-wp-memory-usage'); ?>:
+                    <?php _e('Memory Usage', 'pp-wp-memory-usage'); ?>:
                 </strong>
 
                 <span><?php echo $this->memory['usage']; ?></span>
@@ -215,7 +229,8 @@ class MemoryUsage {
         wp_add_dashboard_widget(
             widget_id: 'pp_memory_dashboard',
             widget_name: __(
-                text: 'Memory Usage Overview', domain: 'pp-wp-memory-usage'
+                'Memory Usage Overview',
+                'pp-wp-memory-usage'
             ),
             callback: [$this, 'renderDashboardWidget']
         );
@@ -229,8 +244,8 @@ class MemoryUsage {
      */
     public function addFooter(string $content): string {
         $content .= ' | ' . sprintf(__(
-                text: 'Memory Usage: %1$s of %2$s (%3$s%%)',
-                domain: 'pp-wp-memory-usage'
+                'Memory Usage: %1$s of %2$s (%3$s%%)',
+                'pp-wp-memory-usage'
             ),
                 $this->memory['usage'],
                 $this->memory['limit'],
@@ -239,23 +254,44 @@ class MemoryUsage {
 
         return $content;
     }
+
+    /**
+     * Add some text to the admin bar
+     *
+     * @param WP_Admin_Bar $wpAdminBar The admin bar instance
+     * @return void
+     */
+    public function addAdminBarInfo(WP_Admin_Bar $wpAdminBar): void {
+        $wpAdminBar->add_node(
+            [
+                'id' => 'memory_usage',
+                'title' => sprintf(
+                    __(
+                        'Memory Usage: %1$s of %2$s (%3$s%%)',
+                        'pp-wp-memory-usage'
+                    ),
+                    $this->memory['usage'],
+                    $this->memory['limit'],
+                    $this->memory['percent']
+                ),
+                'parent' => 'top-secondary',
+                'meta' => [
+                    'class' => 'memory-usage',
+                ],
+            ]
+        );
+    }
 }
 
 /**
- * Start the plugin
- * Only initialize the plugin when the user is in the admin backend
+ * Start the plugin, only in backend
+ *
+ * @return void
  */
-if (is_admin()) {
-    /**
-     * Start the plugin, only in backend
-     *
-     * @return void
-     */
-    function initialize_plugin(): void {
-        $memoryUsage = new MemoryUsage;
+function initialize_plugin(): void {
+    $memoryUsage = new MemoryUsage;
 
-        $memoryUsage->init();
-    }
-
-    initialize_plugin();
+    $memoryUsage->init();
 }
+
+initialize_plugin();

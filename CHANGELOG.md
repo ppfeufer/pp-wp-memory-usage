@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[1.4.0\] - 2024-02-19
+
+### Added
+
+- Memory usage information to the admin bar
+
 ## \[1.3.1\] - 2023-10-03
 
 ### Changed

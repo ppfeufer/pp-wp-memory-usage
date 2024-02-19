@@ -6,4 +6,24 @@ updates:
     directory: "/"
     target-branch: "master"
     schedule:
-      interval: "daily"
+      interval: "monthly"
+    commit-message:
+      # Prefix all commit messages with "[github-actions] "
+      prefix: "[github-actions] "
+    labels:
+      - "github-actions"
+      - "dependencies"
+
+  # Maintain dependencies for Composer
+  - package-ecosystem: "composer"
+    directory: "/"
+    target-branch: "master"
+    versioning-strategy: increase
+    schedule:
+      interval: "monthly"
+    commit-message:
+      # Prefix all commit messages with "[composer] "
+      prefix: "[composer] "
+    labels:
+      - "npm"
+      - "dependencies"

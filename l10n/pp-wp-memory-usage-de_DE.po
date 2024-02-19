@@ -1,31 +1,29 @@
-# Peter Pfeufer <info@ppfeufer.de>, 2023.
+# Peter Pfeufer <info@ppfeufer.de>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 16:13+0000\n"
-"PO-Revision-Date: 2023-07-05 12:19+0000\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pp-wp-memory-"
+"usage\n"
+"POT-Creation-Date: 2024-02-19T18:08:02+00:00\n"
+"PO-Revision-Date: 2024-02-19 18:23+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-"
-"plugins/pp-wp-memory-usage/de/>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/"
+"wordpress-plugins/pp-wp-memory-usage/de/>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18.2\n"
+"X-Generator: Weblate 5.4\n"
 "X-Loco-Version: 2.2.2; wp-5.2-beta1-45108\n"
 
-#: MemoryUsage.php:86 MemoryUsage.php:103
-msgid " MB"
-msgstr " MB"
-
-#: MemoryUsage.php:164
-#, php-format
-msgid "%1$s Bit OS"
-msgstr "%1$s Bit Betriebssystem"
+#. Plugin Name of the plugin
+#: MemoryUsage.php
+msgid "WordPress Memory Usage"
+msgstr "WordPress Memory Usage"
 
 #. Description of the plugin
+#: MemoryUsage.php
 msgid ""
 "Display the memory limit and current memory usage in the dashboard and admin "
 "footer"
@@ -34,38 +32,43 @@ msgstr ""
 "Fuß an"
 
 #. Author of the plugin
+#: MemoryUsage.php
 msgid "H. Peter Pfeufer"
 msgstr "H. Peter Pfeufer"
 
 #. Author URI of the plugin
+#: MemoryUsage.php
 msgid "https://ppfeufer.de"
 msgstr "https://ppfeufer.de"
 
-#: MemoryUsage.php:172
-msgid "Memory Limit"
-msgstr "Speicherlimit"
-
-#: MemoryUsage.php:178
-msgid "Memory Usage"
-msgstr "Speichernutzung"
-
-#: MemoryUsage.php:205
-msgid "Memory Usage Overview"
-msgstr "Übersicht Speichernutzung"
-
-#: MemoryUsage.php:219
-#, php-format
-msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
-msgstr "Speichernutzung: %1$s von %2$s (%3$s%%)"
-
-#: MemoryUsage.php:85 MemoryUsage.php:102
+#: MemoryUsage.php:83 MemoryUsage.php:100
 msgid "N/A"
 msgstr "-"
 
-#: MemoryUsage.php:158
+#: MemoryUsage.php:84 MemoryUsage.php:101
+msgid " MB"
+msgstr " MB"
+
+#: MemoryUsage.php:172
 msgid "PHP Version"
 msgstr "PHP Version"
 
-#. Name of the plugin
-msgid "WordPress Memory Usage"
-msgstr "WordPress Memory Usage"
+#: MemoryUsage.php:180
+msgid "%1$s Bit Operating System"
+msgstr "%1$s Bit Betriebssystem"
+
+#: MemoryUsage.php:189
+msgid "Memory Limit"
+msgstr "Speicherlimit"
+
+#: MemoryUsage.php:197
+msgid "Memory Usage"
+msgstr "Speichernutzung"
+
+#: MemoryUsage.php:231
+msgid "Memory Usage Overview"
+msgstr "Übersicht Speichernutzung"
+
+#: MemoryUsage.php:246 MemoryUsage.php:269
+msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
+msgstr "Speichernutzung: %1$s von %2$s (%3$s%%)"

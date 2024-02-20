@@ -12,7 +12,6 @@ updates:
       prefix: "[github-actions] "
     labels:
       - "github-actions"
-      - "dependencies"
 
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
@@ -25,5 +24,4 @@ updates:
       # Prefix all commit messages with "[composer] "
       prefix: "[composer] "
     labels:
-      - "npm"
-      - "dependencies"
+      - "composer"

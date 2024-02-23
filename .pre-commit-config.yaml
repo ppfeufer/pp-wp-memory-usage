@@ -19,6 +19,8 @@ ci:
   autoupdate_schedule: monthly
   skip:
     - eslint  # Skip ESLint checks in CI due to missing node environment
+    - php-lint-all  # Skip PHP lint checks in CI due to missing PHP environment
+    - php-cs  # Skip PHP Code Sniffer checks in CI due to missing PHP environment
   submodules: false
 
 # Globally exclude files

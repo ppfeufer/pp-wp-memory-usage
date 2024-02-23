@@ -251,16 +251,7 @@ class MemoryUsage {
      * @return string
      */
     public function addFooter(string $content): string {
-        $content .= ' | ' . sprintf(
-            /* Translators: %1$s: Current emory usage, %2$s: Memory limit, %3$s: Current memory usage percentage */
-            __(
-                'Memory Usage: %1$s of %2$s (%3$s%%)',
-                'pp-wp-memory-usage'
-            ),
-            $this->memory['usage'],
-            $this->memory['limit'],
-            $this->memory['percent']
-        );
+        $content .= ' | ' . $this->getMemoryUsageString();
 
         return $content;
     }
@@ -275,20 +266,31 @@ class MemoryUsage {
         $wpAdminBar->add_node(
             [
                 'id' => 'memory_usage',
-                'title' => sprintf(
-                    __(
-                        'Memory Usage: %1$s of %2$s (%3$s%%)',
-                        'pp-wp-memory-usage'
-                    ),
-                    $this->memory['usage'],
-                    $this->memory['limit'],
-                    $this->memory['percent']
-                ),
+                'title' => $this->getMemoryUsageString(),
                 'parent' => 'top-secondary',
                 'meta' => [
                     'class' => 'memory-usage',
                 ],
             ]
+        );
+    }
+
+    /**
+     * Get the memory usage string
+     *
+     * @return string
+     * @scope private
+     */
+    private function getMemoryUsageString(): string {
+        return sprintf(
+            /* Translators: %1$s: Current emory usage, %2$s: Memory limit, %3$s: Current memory usage percentage */
+            __(
+                'Memory Usage: %1$s of %2$s (%3$s%%)',
+                'pp-wp-memory-usage'
+            ),
+            $this->memory['usage'],
+            $this->memory['limit'],
+            $this->memory['percent']
         );
     }
 }

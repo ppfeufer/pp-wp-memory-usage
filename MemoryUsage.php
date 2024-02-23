@@ -283,7 +283,7 @@ class MemoryUsage {
      */
     private function getMemoryUsageString(): string {
         return sprintf(
-            /* Translators: %1$s: Current emory usage, %2$s: Memory limit, %3$s: Current memory usage percentage */
+            /* Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage */
             __(
                 'Memory Usage: %1$s of %2$s (%3$s%%)',
                 'pp-wp-memory-usage'

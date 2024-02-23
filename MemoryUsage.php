@@ -13,9 +13,11 @@
 
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
+// phpcs:disable
 require_once(
     trailingslashit(value: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
 );
+// phpcs:enable
 
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 use WP_Admin_Bar;
@@ -52,7 +54,8 @@ class MemoryUsage {
      */
     private function addAdminHooks(): void {
         add_action(
-            hook_name: 'wp_dashboard_setup', callback: [$this, 'addDashboardWidget']
+            hook_name: 'wp_dashboard_setup',
+            callback: [$this, 'addDashboardWidget']
         );
         add_filter(hook_name: 'admin_footer_text', callback: [$this, 'addFooter']);
     }
@@ -111,11 +114,15 @@ class MemoryUsage {
             $this->memory['percent'] = round(
                 num: trim(
                     str_ireplace(
-                        search: ' MB', replace: '', subject: $this->memory['usage']
+                        search: ' MB',
+                        replace: '',
+                        subject: $this->memory['usage']
                     )
                 ) / trim(
                     str_ireplace(
-                        search: ' MB', replace: '', subject: $this->memory['limit']
+                        search: ' MB',
+                        replace: '',
+                        subject: $this->memory['limit']
                     )
                 ) * 100
             );
@@ -177,6 +184,7 @@ class MemoryUsage {
                     /
                     <?php
                     echo sprintf(
+                        /* Translators: %1$s is the bit size of the operating system (32 or 64-bit) */
                         __('%1$s Bit Operating System', 'pp-wp-memory-usage'),
                         PHP_INT_SIZE * 8
                     );
@@ -243,14 +251,16 @@ class MemoryUsage {
      * @return string
      */
     public function addFooter(string $content): string {
-        $content .= ' | ' . sprintf(__(
+        $content .= ' | ' . sprintf(
+            /* Translators: %1$s: Current emory usage, %2$s: Memory limit, %3$s: Current memory usage percentage */
+            __(
                 'Memory Usage: %1$s of %2$s (%3$s%%)',
                 'pp-wp-memory-usage'
             ),
-                $this->memory['usage'],
-                $this->memory['limit'],
-                $this->memory['percent']
-            );
+            $this->memory['usage'],
+            $this->memory['limit'],
+            $this->memory['percent']
+        );
 
         return $content;
     }
@@ -284,14 +294,10 @@ class MemoryUsage {
 }
 
 /**
- * Start the plugin, only in backend
+ * Start the plugin
  *
  * @return void
  */
-function initialize_plugin(): void {
-    $memoryUsage = new MemoryUsage;
-
-    $memoryUsage->init();
-}
-
-initialize_plugin();
+// phpcs:disable
+(new MemoryUsage())->init();
+// phpcs:enable

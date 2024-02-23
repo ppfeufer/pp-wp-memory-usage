@@ -10,8 +10,17 @@ updates:
     commit-message:
       # Prefix all commit messages with "[github-actions] "
       prefix: "[github-actions] "
-    labels:
-      - "github-actions"
+
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    target-branch: "master"
+    versioning-strategy: increase
+    schedule:
+      interval: "monthly"
+    commit-message:
+      # Prefix all commit messages with "[npm] "
+      prefix: "[npm] "
 
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
@@ -23,5 +32,3 @@ updates:
     commit-message:
       # Prefix all commit messages with "[composer] "
       prefix: "[composer] "
-    labels:
-      - "composer"

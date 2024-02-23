@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[1.4.1\] - 2024-02-23
+
+### Changed
+
+- Updates to linting and automated code style checks
+
 ## \[1.4.0\] - 2024-02-19
 
 ### Added

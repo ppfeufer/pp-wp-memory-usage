@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: WordPress Memory Usage\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pp-wp-memory-"
 "usage\n"
-"POT-Creation-Date: 2024-02-23T17:43:48+00:00\n"
+"POT-Creation-Date: 2024-02-23T17:54:26+00:00\n"
 "PO-Revision-Date: 2024-02-19 18:23+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-"
@@ -70,7 +70,7 @@ msgstr "Speichernutzung"
 msgid "Memory Usage Overview"
 msgstr "Übersicht Speichernutzung"
 
-#. Translators: %1$s: Current emory usage, %2$s: Memory limit, %3$s: Current memory usage percentage
+#. Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage
 #: MemoryUsage.php:287
 msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
 msgstr "Speichernutzung: %1$s von %2$s (%3$s%%)"

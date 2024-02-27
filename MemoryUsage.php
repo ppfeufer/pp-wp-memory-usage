@@ -22,9 +22,17 @@ require_once(
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 use WP_Admin_Bar;
 
+/**
+ * Class MemoryUsage
+ *
+ * @package WordPress\Ppfeufer\Plugin\WpMemoryUsage
+ * @since 1.0.0
+ */
 class MemoryUsage {
     /**
-     * @var array
+     * @var array $memory The memory data
+     * @since 1.0.0
+     * @access protected
      */
     protected array $memory = [];
 
@@ -32,6 +40,8 @@ class MemoryUsage {
      * Initialize the class
      *
      * @return void
+     * @since 1.0.0
+     * @access public
      */
     public function init(): void {
         $this->loadTextDomain();
@@ -51,6 +61,8 @@ class MemoryUsage {
      * Add the admin hooks
      *
      * @return void
+     * @since 1.0.0
+     * @access private
      */
     private function addAdminHooks(): void {
         add_action(
@@ -64,6 +76,8 @@ class MemoryUsage {
      * Loading the text domain
      *
      * @return void
+     * @since 1.0.0
+     * @access public
      */
     public function loadTextDomain(): void {
         if (function_exists(function: 'load_plugin_textdomain')) {
@@ -78,6 +92,8 @@ class MemoryUsage {
      * Get memory limit
      *
      * @return void
+     * @since 1.0.0
+     * @access private
      */
     private function getMemoryLimit(): void {
         $memoryLimit = (int)ini_get(option: 'memory_limit');
@@ -91,6 +107,8 @@ class MemoryUsage {
      * Get memory usage
      *
      * @return void
+     * @since 1.0.0
+     * @access private
      */
     private function getMemoryUsage(): void {
         $memoryUsage = 0;
@@ -108,6 +126,8 @@ class MemoryUsage {
      * Get memory percentage
      *
      * @return void
+     * @since 1.0.0
+     * @access private
      */
     private function getMemoryPercentage(): void {
         if (!empty($this->memory['usage']) && !empty($this->memory['limit'])) {
@@ -155,6 +175,8 @@ class MemoryUsage {
      * Check GitHub for updates
      *
      * @return void
+     * @since 1.0.0
+     * @access public
      */
     public function doUpdateCheck(): void {
         $myUpdateChecker = PucFactory::buildUpdateChecker(
@@ -170,6 +192,8 @@ class MemoryUsage {
      * Render the dashboard widget
      *
      * @return void
+     * @since 1.0.0
+     * @access public
      */
     public function renderDashboardWidget(): void {
         ?>
@@ -232,6 +256,8 @@ class MemoryUsage {
      * Add the widget to the dashboard
      *
      * @return void
+     * @since 1.0.0
+     * @access public
      */
     public function addDashboardWidget(): void {
         wp_add_dashboard_widget(
@@ -247,8 +273,10 @@ class MemoryUsage {
     /**
      * Add some text to the admin footer
      *
-     * @param string $content
+     * @param string $content The current footer content
      * @return string
+     * @since 1.0.0
+     * @access public
      */
     public function addFooter(string $content): string {
         $content .= ' | ' . $this->getMemoryUsageString();
@@ -261,6 +289,8 @@ class MemoryUsage {
      *
      * @param WP_Admin_Bar $wpAdminBar The admin bar instance
      * @return void
+     * @since 1.4.1
+     * @access public
      */
     public function addAdminBarInfo(WP_Admin_Bar $wpAdminBar): void {
         $wpAdminBar->add_node(
@@ -279,7 +309,8 @@ class MemoryUsage {
      * Get the memory usage string
      *
      * @return string
-     * @scope private
+     * @since 1.4.1
+     * @access private
      */
     private function getMemoryUsageString(): string {
         return sprintf(
@@ -297,8 +328,6 @@ class MemoryUsage {
 
 /**
  * Start the plugin
- *
- * @return void
  */
 // phpcs:disable
 (new MemoryUsage())->init();

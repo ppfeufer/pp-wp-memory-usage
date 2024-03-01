@@ -14,12 +14,10 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
-require_once(
-    trailingslashit(value: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
-);
+require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
 // phpcs:enable
 
-use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p4\PucFactory;
 use WP_Admin_Bar;
 
 /**

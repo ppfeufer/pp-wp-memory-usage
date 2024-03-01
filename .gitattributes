@@ -16,7 +16,6 @@ phpcs.xml export-ignore
 
 # readme files
 README.md export-ignore
-README.txt export-ignore
 
 # other files
 .editorconfig export-ignore

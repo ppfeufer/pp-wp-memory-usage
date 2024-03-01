@@ -22,6 +22,6 @@ README.txt export-ignore
 .editorconfig export-ignore
 .nvmrc export-ignore
 .pre-commit-config.yaml export-ignore
-.stylelintrc export-ignore
+.stylelintrc.json export-ignore
 eslint.config.js export-ignore
 Makefile export-ignore

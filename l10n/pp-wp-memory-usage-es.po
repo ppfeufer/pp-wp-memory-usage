@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: WordPress Memory Usage\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pp-wp-memory-"
 "usage\n"
-"POT-Creation-Date: 2024-02-27T22:23:48+00:00\n"
+"POT-Creation-Date: 2024-03-01T22:13:28+00:00\n"
 "PO-Revision-Date: 2023-09-25 22:42+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/wordpress-"
@@ -40,36 +40,36 @@ msgstr "H. Peter Pfeufer"
 msgid "https://ppfeufer.de"
 msgstr "https://ppfeufer.de"
 
-#: MemoryUsage.php:102 MemoryUsage.php:121
+#: MemoryUsage.php:89 MemoryUsage.php:108
 msgid "N/A"
 msgstr ""
 
-#: MemoryUsage.php:103 MemoryUsage.php:122
+#: MemoryUsage.php:90 MemoryUsage.php:109
 msgid " MB"
 msgstr ""
 
-#: MemoryUsage.php:203
+#: MemoryUsage.php:205
 msgid "PHP Version"
 msgstr ""
 
 #. Translators: %1$s is the bit size of the operating system (32 or 64-bit)
-#: MemoryUsage.php:212
+#: MemoryUsage.php:214
 msgid "%1$s Bit Operating System"
 msgstr ""
 
-#: MemoryUsage.php:221
+#: MemoryUsage.php:223
 msgid "Memory Limit"
 msgstr ""
 
-#: MemoryUsage.php:229
+#: MemoryUsage.php:231
 msgid "Memory Usage"
 msgstr ""
 
-#: MemoryUsage.php:265
+#: MemoryUsage.php:267
 msgid "Memory Usage Overview"
 msgstr ""
 
 #. Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage
-#: MemoryUsage.php:318
+#: MemoryUsage.php:299
 msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
 msgstr ""

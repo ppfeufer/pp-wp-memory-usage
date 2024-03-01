@@ -111,7 +111,7 @@ repos:
           - --report=full
 
   - repo: https://github.com/eslint/eslint
-    rev: v8.56.0
+    rev: v8.57.0
     hooks:
       - id: eslint
         name: ESLint

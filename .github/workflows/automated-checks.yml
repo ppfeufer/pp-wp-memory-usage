@@ -36,7 +36,6 @@ jobs:
           python-version: '3.11'
           check-latest: true
 
-            # Set up Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

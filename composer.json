@@ -13,14 +13,40 @@
     "require-dev": {
         "roave/security-advisories": "dev-latest",
         "wp-cli/wp-cli-bundle": "*",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "brianhenryie/strauss": "^0.16.0"
+    },
+    "extra": {
+        "strauss": {
+            "target_directory": "Sources/Libs",
+            "namespace_prefix": "WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\Libs\\"
+        }
+    },
+    "scripts": {
+        "strauss": [
+            "Composer\\Config::disableProcessTimeout",
+            "vendor/bin/strauss",
+            "composer dump-autoload"
+        ],
+        "post-install-cmd": [
+            "@strauss"
+        ],
+        "post-update-cmd": [
+            "@strauss"
+        ]
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "classmap-authoritative": true,
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
-            "WordPress\\Ppfeufer\\Plugin\\WpBasicSecurity\\": "Sources"
-        }
+            "WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\": "Sources"
+        },
+        "classmap": [
+            "vendor"
+        ]
     }
 }

@@ -29,7 +29,7 @@ exclude: |
   (?x)(
     LICENSE|
     .min(.css|.css.map|.js|.js.map)|
-    Libs/YahnisElsts/PluginUpdateChecker/|
+    Sources/Libs/|
     css/libs/|
     .vscode/|
     .idea/

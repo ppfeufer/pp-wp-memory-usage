@@ -3,7 +3,7 @@
  * Plugin Name: WordPress Memory Usage
  * Plugin URI:
  * Description: Display the memory limit and current memory usage in the dashboard and admin footer
- * Version: 1.4.1
+ * Version: 1.5.0
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
  * License: GPLv2
@@ -14,12 +14,10 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
-require_once(
-    trailingslashit(value: __DIR__) . 'Libs/YahnisElsts/PluginUpdateChecker/plugin-update-checker.php'
-);
+require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
 // phpcs:enable
 
-use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p4\PucFactory;
 use WP_Admin_Bar;
 
 /**
@@ -54,22 +52,11 @@ class MemoryUsage {
             $this->addAdminHooks();
         }
 
-        add_action(hook_name: 'admin_bar_menu', callback: [$this, 'addAdminBarInfo'], priority: 999);
-    }
-
-    /**
-     * Add the admin hooks
-     *
-     * @return void
-     * @since 1.0.0
-     * @access private
-     */
-    private function addAdminHooks(): void {
         add_action(
-            hook_name: 'wp_dashboard_setup',
-            callback: [$this, 'addDashboardWidget']
+            hook_name: 'admin_bar_menu',
+            callback: [$this, 'addAdminBarInfo'],
+            priority: 999
         );
-        add_filter(hook_name: 'admin_footer_text', callback: [$this, 'addFooter']);
     }
 
     /**
@@ -189,6 +176,21 @@ class MemoryUsage {
     }
 
     /**
+     * Add the admin hooks
+     *
+     * @return void
+     * @since 1.0.0
+     * @access private
+     */
+    private function addAdminHooks(): void {
+        add_action(
+            hook_name: 'wp_dashboard_setup',
+            callback: [$this, 'addDashboardWidget']
+        );
+        add_filter(hook_name: 'admin_footer_text', callback: [$this, 'addFooter']);
+    }
+
+    /**
      * Render the dashboard widget
      *
      * @return void
@@ -285,6 +287,26 @@ class MemoryUsage {
     }
 
     /**
+     * Get the memory usage string
+     *
+     * @return string
+     * @since 1.4.1
+     * @access private
+     */
+    private function getMemoryUsageString(): string {
+        return sprintf(
+            /* Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage */
+            __(
+                'Memory Usage: %1$s of %2$s (%3$s%%)',
+                'pp-wp-memory-usage'
+            ),
+            $this->memory['usage'],
+            $this->memory['limit'],
+            $this->memory['percent']
+        );
+    }
+
+    /**
      * Add some text to the admin bar
      *
      * @param WP_Admin_Bar $wpAdminBar The admin bar instance
@@ -302,26 +324,6 @@ class MemoryUsage {
                     'class' => 'memory-usage',
                 ],
             ]
-        );
-    }
-
-    /**
-     * Get the memory usage string
-     *
-     * @return string
-     * @since 1.4.1
-     * @access private
-     */
-    private function getMemoryUsageString(): string {
-        return sprintf(
-            /* Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage */
-            __(
-                'Memory Usage: %1$s of %2$s (%3$s%%)',
-                'pp-wp-memory-usage'
-            ),
-            $this->memory['usage'],
-            $this->memory['limit'],
-            $this->memory['percent']
         );
     }
 }

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[1.5.0\] - 2024-03-01
+
+### Changed
+
+- Using [strauss](https://github.com/BrianHenryIE/strauss) to include our dependencies in the plugin's namespace
+
 ## \[1.4.1\] - 2024-02-23
 
 ### Changed

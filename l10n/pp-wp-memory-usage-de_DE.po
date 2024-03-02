@@ -9,9 +9,9 @@ msgstr ""
 "POT-Creation-Date: 2024-03-02T11:40:18+00:00\n"
 "PO-Revision-Date: 2024-03-02 11:59+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: German (formal) <https://weblate.ppfeufer.de/projects/"
-"wordpress-plugins/pp-wp-memory-usage/de@formal/>\n"
-"Language: de_DE_formal\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/"
+"wordpress-plugins/pp-wp-memory-usage/de/>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,12 +22,14 @@ msgstr ""
 #. Plugin Name of the plugin
 #: MemoryUsage.php
 msgid "WordPress Memory Usage"
-msgstr ""
+msgstr "WordPress Speichernutzung"
 
 #. Description of the plugin
 #: MemoryUsage.php
 msgid "Display the memory limit and current memory usage in the dashboard and admin footer"
 msgstr ""
+"Zeigen Sie das Speicherlimit und die aktuelle Speichernutzung im Dashboard "
+"und in der Admin-Fußzeile an"
 
 #. Author of the plugin
 #: MemoryUsage.php
@@ -42,35 +44,35 @@ msgstr "https://ppfeufer.de"
 #: MemoryUsage.php:89
 #: MemoryUsage.php:108
 msgid "N/A"
-msgstr ""
+msgstr "-"
 
 #: MemoryUsage.php:90
 #: MemoryUsage.php:109
 msgid " MB"
-msgstr ""
+msgstr " MB"
 
 #: MemoryUsage.php:205
 msgid "PHP Version"
-msgstr ""
+msgstr "PHP Version"
 
 #. Translators: %1$s is the bit size of the operating system (32 or 64-bit)
 #: MemoryUsage.php:214
 msgid "%1$s Bit Operating System"
-msgstr ""
+msgstr "%1$s Bit Betriebssystem"
 
 #: MemoryUsage.php:223
 msgid "Memory Limit"
-msgstr ""
+msgstr "Speicherlimit"
 
 #: MemoryUsage.php:231
 msgid "Memory Usage"
-msgstr ""
+msgstr "Speichernutzung"
 
 #: MemoryUsage.php:267
 msgid "Memory Usage Overview"
-msgstr ""
+msgstr "Übersicht über die Speichernutzung"
 
 #. Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage
 #: MemoryUsage.php:299
 msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
-msgstr ""
+msgstr "Speichernutzung: %1$s von %2$s (%3$s%%)"

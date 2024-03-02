@@ -24,3 +24,4 @@ README.md export-ignore
 .stylelintrc.json export-ignore
 eslint.config.js export-ignore
 Makefile export-ignore
+CODEOWNERS export-ignore

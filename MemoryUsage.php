@@ -14,7 +14,7 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
-require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
+require_once trailingslashit(value: __DIR__) . 'vendor/autoload.php';
 // phpcs:enable
 
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p4\PucFactory;

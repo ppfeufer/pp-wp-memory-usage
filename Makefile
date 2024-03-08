@@ -10,10 +10,10 @@ help:
 	@echo "Usage: make [command]"
 	@echo ""
 	@echo "Commands:"
-	@echo "  activate            Activate the plugin"
-	@echo "  deactivate          Deactivate the plugin"
-	@echo "  make-pot            Create the plugin .pot file"
-	@echo "  clear-transient     Clear all transient caches"
+	@echo "  activate           Activate the plugin"
+	@echo "  deactivate         Deactivate the plugin"
+	@echo "  make-pot           Create the plugin .pot file"
+	@echo "  clear-transient    Clear all transient caches"
 
 activate:
 	$(wp_cli) plugin activate \

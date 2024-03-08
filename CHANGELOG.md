@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[1.5.1\] - 2024-03-08
+
+### Added
+
+- Apparently, we have to add the whole vendor directory to the plugin for the
+  autoloader to work properly. This is a bit of a pain, but seems to be the only way.
+
 ## \[1.5.0\] - 2024-03-01
 
 ### Changed

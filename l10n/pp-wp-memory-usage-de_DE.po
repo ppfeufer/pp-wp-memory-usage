@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pp-wp-memory-"
 "usage\n"
 "POT-Creation-Date: 2024-03-02T11:40:18+00:00\n"
-"PO-Revision-Date: 2024-03-02 11:59+0000\n"
+"PO-Revision-Date: 2024-03-12 14:11+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/"
 "wordpress-plugins/pp-wp-memory-usage/de/>\n"
@@ -28,8 +28,8 @@ msgstr "WordPress Speichernutzung"
 #: MemoryUsage.php
 msgid "Display the memory limit and current memory usage in the dashboard and admin footer"
 msgstr ""
-"Zeigen Sie das Speicherlimit und die aktuelle Speichernutzung im Dashboard "
-"und in der Admin-Fußzeile an"
+"Zeigt das Speicherlimit und die aktuelle Speichernutzung im Dashboard und in "
+"der Admin-Fußzeile an"
 
 #. Author of the plugin
 #: MemoryUsage.php

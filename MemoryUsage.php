@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: WordPress Memory Usage
- * Plugin URI:
+ * Plugin URI: https://github.com/ppfeufer/pp-wp-memory-usage
  * Description: Display the memory limit and current memory usage in the dashboard and admin footer
- * Version: 1.5.1
+ * Version: 1.5.2
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
  * License: GPLv2

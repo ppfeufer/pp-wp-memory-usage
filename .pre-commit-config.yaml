@@ -123,7 +123,7 @@ repos:
 #          - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.2.1
+    rev: v16.3.1
     hooks:
       - id: stylelint
         name: Stylelint

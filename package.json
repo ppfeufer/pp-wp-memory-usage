@@ -3,6 +3,6 @@
     "devDependencies": {
         "eslint": "^8.57.0",
         "globals": "^14.0.0",
-        "sass": "^1.70.0"
+        "sass": "^1.72.0"
     }
 }

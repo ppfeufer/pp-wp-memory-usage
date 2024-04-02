@@ -1,7 +1,7 @@
 # Makefile for the WordPress plugin WordPress Memory Usage
 
 wp_cli = ./vendor/bin/wp
-wp_path = /mnt/sda1/Development/PHP/Sources/WordPress
+wp_path = ./../../../../Sources
 
 plugin_name = WordPress Memory Usage
 plugin_slug = pp-wp-memory-usage

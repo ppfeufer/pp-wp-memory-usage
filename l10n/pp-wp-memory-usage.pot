@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2.
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress Memory Usage 1.5.0\n"
+"Project-Id-Version: WordPress Memory Usage 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pp-wp-memory-usage\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-03-02T11:40:18+00:00\n"
+"POT-Creation-Date: 2024-04-13T10:24:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: pp-wp-memory-usage\n"
@@ -17,6 +17,11 @@ msgstr ""
 #. Plugin Name of the plugin
 #: MemoryUsage.php
 msgid "WordPress Memory Usage"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: MemoryUsage.php
+msgid "https://github.com/ppfeufer/pp-wp-memory-usage"
 msgstr ""
 
 #. Description of the plugin
@@ -34,38 +39,38 @@ msgstr ""
 msgid "https://ppfeufer.de"
 msgstr ""
 
-#: MemoryUsage.php:89
-#: MemoryUsage.php:108
+#: Sources/Main.php:72
+#: Sources/Main.php:91
 msgid "N/A"
 msgstr ""
 
-#: MemoryUsage.php:90
-#: MemoryUsage.php:109
+#: Sources/Main.php:73
+#: Sources/Main.php:92
 msgid " MB"
 msgstr ""
 
-#: MemoryUsage.php:205
+#: Sources/Main.php:186
 msgid "PHP Version"
 msgstr ""
 
 #. Translators: %1$s is the bit size of the operating system (32 or 64-bit)
-#: MemoryUsage.php:214
+#: Sources/Main.php:195
 msgid "%1$s Bit Operating System"
 msgstr ""
 
-#: MemoryUsage.php:223
+#: Sources/Main.php:204
 msgid "Memory Limit"
 msgstr ""
 
-#: MemoryUsage.php:231
+#: Sources/Main.php:212
 msgid "Memory Usage"
 msgstr ""
 
-#: MemoryUsage.php:267
+#: Sources/Main.php:248
 msgid "Memory Usage Overview"
 msgstr ""
 
 #. Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage
-#: MemoryUsage.php:299
+#: Sources/Main.php:280
 msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
 msgstr ""

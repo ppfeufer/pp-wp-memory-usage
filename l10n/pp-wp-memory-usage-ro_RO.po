@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: WordPress Memory Usage 1.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pp-wp-memory-"
 "usage\n"
-"POT-Creation-Date: 2024-03-02T11:40:18+00:00\n"
-"PO-Revision-Date: 2024-03-02 11:59+0000\n"
+"POT-Creation-Date: 2024-04-13T10:24:59+00:00\n"
+"PO-Revision-Date: 2024-04-13 10:30+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Romanian <https://weblate.ppfeufer.de/projects/"
 "wordpress-plugins/pp-wp-memory-usage/ro/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.4.2\n"
+"X-Generator: Weblate 5.4.3\n"
 "X-Domain: pp-wp-memory-usage\n"
 
 #. Plugin Name of the plugin
@@ -25,9 +25,16 @@ msgstr ""
 msgid "WordPress Memory Usage"
 msgstr ""
 
+#. Plugin URI of the plugin
+#: MemoryUsage.php
+msgid "https://github.com/ppfeufer/pp-wp-memory-usage"
+msgstr "https://github.com/ppfeufer/pp-wp-memory-usage"
+
 #. Description of the plugin
 #: MemoryUsage.php
-msgid "Display the memory limit and current memory usage in the dashboard and admin footer"
+msgid ""
+"Display the memory limit and current memory usage in the dashboard and admin "
+"footer"
 msgstr ""
 
 #. Author of the plugin
@@ -40,38 +47,36 @@ msgstr "H. Peter Pfeufer"
 msgid "https://ppfeufer.de"
 msgstr "https://ppfeufer.de"
 
-#: MemoryUsage.php:89
-#: MemoryUsage.php:108
+#: Sources/Main.php:72 Sources/Main.php:91
 msgid "N/A"
 msgstr ""
 
-#: MemoryUsage.php:90
-#: MemoryUsage.php:109
+#: Sources/Main.php:73 Sources/Main.php:92
 msgid " MB"
 msgstr ""
 
-#: MemoryUsage.php:205
+#: Sources/Main.php:186
 msgid "PHP Version"
 msgstr ""
 
 #. Translators: %1$s is the bit size of the operating system (32 or 64-bit)
-#: MemoryUsage.php:214
+#: Sources/Main.php:195
 msgid "%1$s Bit Operating System"
 msgstr ""
 
-#: MemoryUsage.php:223
+#: Sources/Main.php:204
 msgid "Memory Limit"
 msgstr ""
 
-#: MemoryUsage.php:231
+#: Sources/Main.php:212
 msgid "Memory Usage"
 msgstr ""
 
-#: MemoryUsage.php:267
+#: Sources/Main.php:248
 msgid "Memory Usage Overview"
 msgstr ""
 
 #. Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage
-#: MemoryUsage.php:299
+#: Sources/Main.php:280
 msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
 msgstr ""

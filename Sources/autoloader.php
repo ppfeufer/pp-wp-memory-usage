@@ -11,8 +11,10 @@ namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
  * @package WordPress\Ppfeufer\Plugin\WpMemoryUsage
  */
 spl_autoload_register(callback: static function (string $className): void {
+    $myNamespace = 'WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage';
+
     // If the specified $className does not include our namespace, duck out.
-    if (!str_contains(haystack: $className, needle: 'WordPress\Ppfeufer\Plugin\WpMemoryUsage')) {
+    if (!str_starts_with(haystack: $className, needle: $myNamespace)) {
         return;
     }
 

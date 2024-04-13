@@ -11,16 +11,14 @@
  * Domain Path: /l10n
  */
 
-//namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
+namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
-use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Main;
-
 define('PP_WP_MEMORY_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
-//require_once trailingslashit(value: __DIR__) . 'vendor/autoload.php';
 require_once trailingslashit(value: __DIR__) . 'Sources/autoloader.php';
+require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
 // phpcs:enable
 
-$plugin = new Main();
-$plugin->init();
+// Load the plugin's main class.
+(new Main())->init();

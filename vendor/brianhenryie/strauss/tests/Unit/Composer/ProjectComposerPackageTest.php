@@ -4,7 +4,7 @@ namespace BrianHenryIE\Strauss\Tests\Unit\Composer;
 
 use BrianHenryIE\Strauss\Composer\Extra\StraussConfig;
 use BrianHenryIE\Strauss\Composer\ProjectComposerPackage;
-use PHPUnit\Framework\TestCase;
+use BrianHenryIE\Strauss\TestCase;
 use Symfony\Component\Console\Input\InputInterface;
 
 /**
@@ -26,7 +26,7 @@ class ProjectComposerPackageTest extends TestCase
         $input = $this->createMock(InputInterface::class);
         $config = $composer->getStraussConfig($input);
 
-        $this->assertInstanceOf(StraussConfig::class, $config);
+        self::assertInstanceOf(StraussConfig::class, $config);
     }
 
     /**
@@ -43,6 +43,6 @@ class ProjectComposerPackageTest extends TestCase
 
         $expected = ["src","includes","classes","functions.php"];
 
-        self::assertEquals($expected, $phpFiles);
+        self::assertEqualsRN($expected, $phpFiles);
     }
 }

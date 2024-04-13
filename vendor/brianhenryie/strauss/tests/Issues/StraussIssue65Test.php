@@ -6,6 +6,7 @@
 namespace BrianHenryIE\Strauss\Tests\Issues;
 
 use BrianHenryIE\Strauss\Console\Commands\Compose;
+use BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -13,15 +14,13 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @package BrianHenryIE\Strauss\Tests\Issues
  * @coversNothing
  */
-class StraussIssue65Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase
+class StraussIssue65Test extends IntegrationTestCase
 {
 
     /**
      */
     public function test_aws_prefixed_functions()
     {
-        $this->markTestSkipped('slow test');
-
         $composerJsonString = <<<'EOD'
 {
   "name": "brianhenryie/strauss-issue-65-aws-prefixed-functions",
@@ -32,7 +31,13 @@ class StraussIssue65Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\In
     "strauss": {
       "namespace_prefix": "BrianHenryIE\\Issue65\\",
       "classmap_prefix": "BH_Strauss_Issue65_"
-    }
+    },
+    "aws/aws-sdk-php": [
+        "S3"
+    ]
+  },
+  "scripts": {
+    "pre-autoload-dump": "Aws\\Script\\Composer\\Composer::removeUnusedServices"
   }
 }
 EOD;
@@ -52,6 +57,12 @@ EOD;
 
         // vendor/aws/aws-sdk-php/src/Endpoint/UseDualstackEndpoint/Configuration.php
 
-        $this->assertNotEquals(1, $result);
+        self::assertNotEquals(1, $result);
+
+        $php_string = file_get_contents($this->testsWorkingDir .'vendor-prefixed/aws/aws-sdk-php/src/Endpoint/UseDualstackEndpoint/Configuration.php');
+
+        self::assertStringNotContainsString('$this->useDualstackEndpoint = Aws\boolean_value($useDualstackEndpoint);', $php_string);
+        self::assertStringNotContainsString('$this->useDualstackEndpoint = BrianHenryIE\Issue65\Aws\boolean_value($useDualstackEndpoint);', $php_string);
+        self::assertStringContainsString('$this->useDualstackEndpoint = \BrianHenryIE\Issue65\Aws\boolean_value($useDualstackEndpoint);', $php_string);
     }
 }

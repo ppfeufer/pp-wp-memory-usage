@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
+class ComposerStaticInit1dbe909ce483980c6880cf3a7a1f51cc
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -387,6 +387,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'AbstractCorrectName' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/NamingConventions/AbstractClassNamePrefixUnitTest.inc',
         'AbstractEditingScreenModeWidgetActions' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/MySource/Tests/Channels/DisallowSelfActionsUnitTest.inc',
         'AbstractFinal' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/File/GetClassPropertiesTest.inc',
+        'AbstractFoo' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/CodeAnalysis/UselessOverridingMethodUnitTest.1.inc',
         'AbstractReadOnlyClass' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/File/GetClassPropertiesTest.inc',
         'AbstractReadonlyWithDocblock' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Squiz/Tests/Commenting/ClassCommentUnitTest.inc',
         'AllGood' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Squiz/Tests/Commenting/ClassCommentUnitTest.inc',
@@ -402,7 +403,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'BadTraitName' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/NamingConventions/TraitNameSuffixUnitTest.inc',
         'BadTraitNametrait' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/NamingConventions/TraitNameSuffixUnitTest.inc',
         'Bar' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Tokenizer/EnumCaseTest.inc',
-        'BarFoo' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/CodeAnalysis/UselessOverridingMethodUnitTest.inc',
+        'BarFoo' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/CodeAnalysis/UselessOverridingMethodUnitTest.1.inc',
         'Bar\\Bar' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/PSR1/Tests/Files/SideEffectsUnitTest.6.inc',
         'Bar_Foo' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/CodeAnalysis/UnnecessaryFinalModifierUnitTest.1.inc',
         'Base' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/File/GetMemberPropertiesTest.inc',
@@ -421,8 +422,10 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'BrianHenryIE\\Strauss\\FileEnumerator' => __DIR__ . '/..' . '/brianhenryie/strauss/src/FileEnumerator.php',
         'BrianHenryIE\\Strauss\\Licenser' => __DIR__ . '/..' . '/brianhenryie/strauss/src/Licenser.php',
         'BrianHenryIE\\Strauss\\Prefixer' => __DIR__ . '/..' . '/brianhenryie/strauss/src/Prefixer.php',
+        'BrianHenryIE\\Strauss\\TestCase' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/TestCase.php',
         'BrianHenryIE\\Strauss\\Tests\\Integration\\ChangeEnumeratorIntegrationTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Integration/ChangeEnumeratorIntegrationTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Integration\\CleanupIntegrationTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Integration/CleanupIntegrationTest.php',
+        'BrianHenryIE\\Strauss\\Tests\\Integration\\CleanupSymlinkIntegrationTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Integration/CleanupSymlinkIntegrationTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Integration\\CopierIntegrationTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Integration/CopierIntegrationTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Integration\\FileEnumeratorIntegrationTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Integration/FileEnumeratorIntegrationTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Integration\\ReplacerIntegrationTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Integration/ReplacerIntegrationTest.php',
@@ -461,13 +464,17 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'BrianHenryIE\\Strauss\\Tests\\Issues\\StraussIssue76Test' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Issues/StraussIssue76Test.php',
         'BrianHenryIE\\Strauss\\Tests\\Issues\\StraussIssue79Test' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Issues/StraussIssue79Test.php',
         'BrianHenryIE\\Strauss\\Tests\\Issues\\StraussIssue80Test' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Issues/StraussIssue80Test.php',
+        'BrianHenryIE\\Strauss\\Tests\\Issues\\StraussIssue81Test' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Issues/StraussIssue81Test.php',
         'BrianHenryIE\\Strauss\\Tests\\Issues\\StraussIssue83Test' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Issues/StraussIssue83Test.php',
+        'BrianHenryIE\\Strauss\\Tests\\Issues\\StraussIssue88Test' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Issues/StraussIssue88Test.php',
         'BrianHenryIE\\Strauss\\Tests\\Issues\\StraussIssue8Test' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Issues/StraussIssue8Test.php',
+        'BrianHenryIE\\Strauss\\Tests\\Issues\\StraussIssue91Test' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Issues/StraussIssue91Test.php',
         'BrianHenryIE\\Strauss\\Tests\\Unit\\ChangeEnumeratorTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Unit/ChangeEnumeratorTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Unit\\Composer\\ComposerPackageTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Unit/Composer/ComposerPackageTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Unit\\Composer\\ProjectComposerPackageTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Unit/Composer/ProjectComposerPackageTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Unit\\Console\\ApplicationTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Unit/Console/ApplicationTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Unit\\Console\\Commands\\ComposeTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Unit/Console/Commands/ComposeTest.php',
+        'BrianHenryIE\\Strauss\\Tests\\Unit\\FileEnumeratorTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Unit/FileEnumeratorTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Unit\\LicenserTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Unit/LicenserTest.php',
         'BrianHenryIE\\Strauss\\Tests\\Unit\\PrefixerTest' => __DIR__ . '/..' . '/brianhenryie/strauss/tests/Unit/PrefixerTest.php',
         'C' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/PEAR/Tests/Functions/FunctionCallSignatureUnitTest.inc',
@@ -526,7 +533,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'CommentedOutCodeAtStartOfClassNoBlankLine' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Squiz/Tests/WhiteSpace/MemberVarSpacingUnitTest.inc',
         'CompletelyWrongClassName' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Squiz/Tests/Classes/ClassFileNameUnitTest.inc',
         'ComplexEnum' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Tokenizer/EnumCaseTest.inc',
-        'ComposerAutoloaderInit5889f0b6b1590289d1db2de1df1dafcf' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'ComposerAutoloaderInit1dbe909ce483980c6880cf3a7a1f51cc' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'ComposerJsonTest' => __DIR__ . '/..' . '/wp-cli/package-command/tests/test-composer-json.php',
         'Composer\\Advisory\\Auditor' => __DIR__ . '/..' . '/composer/composer/src/Composer/Advisory/Auditor.php',
         'Composer\\Advisory\\IgnoredSecurityAdvisory' => __DIR__ . '/..' . '/composer/composer/src/Composer/Advisory/IgnoredSecurityAdvisory.php',
@@ -535,7 +542,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'Composer\\Autoload\\AutoloadGenerator' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/AutoloadGenerator.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/ClassLoader.php',
         'Composer\\Autoload\\ClassMapGenerator' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/ClassMapGenerator.php',
-        'Composer\\Autoload\\ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Composer\\Autoload\\ComposerStaticInit1dbe909ce483980c6880cf3a7a1f51cc' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\CaBundle\\CaBundle' => __DIR__ . '/..' . '/composer/ca-bundle/src/CaBundle.php',
         'Composer\\Cache' => __DIR__ . '/..' . '/composer/composer/src/Composer/Cache.php',
         'Composer\\ClassMapGenerator\\ClassMap' => __DIR__ . '/..' . '/composer/class-map-generator/src/ClassMap.php',
@@ -886,6 +893,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'Empty_Interface_Doc' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/PEAR/Tests/Commenting/ClassCommentUnitTest.inc',
         'Empty_Trait_Doc' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/PEAR/Tests/Commenting/ClassCommentUnitTest.inc',
         'Enum' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Tokenizer/BackfillEnumTest.inc',
+        'EnumFoo' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/CodeAnalysis/UselessOverridingMethodUnitTest.1.inc',
         'EnumWithIntersectionTypedConstants' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Tokenizer/TypedConstantsTest.inc',
         'EvalFile_Command' => __DIR__ . '/..' . '/wp-cli/eval-command/src/EvalFile_Command.php',
         'Eval_Command' => __DIR__ . '/..' . '/wp-cli/eval-command/src/Eval_Command.php',
@@ -1046,6 +1054,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'IndentedDeclaration' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/PSR2/Tests/Classes/ClassDeclarationUnitTest.inc',
         'InflectorTest' => __DIR__ . '/..' . '/wp-cli/wp-cli/tests/test-inflector.php',
         'Insecurity' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/MySource/Tests/PHP/GetRequestDataUnitTest.inc',
+        'InterfaceFoo' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/CodeAnalysis/UselessOverridingMethodUnitTest.1.inc',
         'InterfaceMethodNotImplement' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/CodeAnalysis/UnusedFunctionParameterUnitTest.1.inc',
         'InterfaceName' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/File/GetDeclarationNameTest.inc',
         'InterfaceWith12345Numbers' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/File/GetDeclarationNameTest.inc',
@@ -2047,6 +2056,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'PHP_CodeSniffer\\Tests\\Core\\Filters\\Filter\\AcceptTest' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Filters/Filter/AcceptTest.php',
         'PHP_CodeSniffer\\Tests\\Core\\Filters\\GitModifiedTest' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Filters/GitModifiedTest.php',
         'PHP_CodeSniffer\\Tests\\Core\\Filters\\GitStagedTest' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Filters/GitStagedTest.php',
+        'PHP_CodeSniffer\\Tests\\Core\\Fixer\\GenerateDiffTest' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Fixer/GenerateDiffTest.php',
         'PHP_CodeSniffer\\Tests\\Core\\Ruleset\\ExplainTest' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Ruleset/ExplainTest.php',
         'PHP_CodeSniffer\\Tests\\Core\\Ruleset\\RuleInclusionAbsoluteLinuxTest' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Ruleset/RuleInclusionAbsoluteLinuxTest.php',
         'PHP_CodeSniffer\\Tests\\Core\\Ruleset\\RuleInclusionAbsoluteWindowsTest' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Ruleset/RuleInclusionAbsoluteWindowsTest.php',
@@ -2668,8 +2678,10 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'Symfony\\Component\\Cache\\Traits\\ProxyTrait' => __DIR__ . '/..' . '/symfony/cache/Traits/ProxyTrait.php',
         'Symfony\\Component\\Cache\\Traits\\Redis5Proxy' => __DIR__ . '/..' . '/symfony/cache/Traits/Redis5Proxy.php',
         'Symfony\\Component\\Cache\\Traits\\Redis6Proxy' => __DIR__ . '/..' . '/symfony/cache/Traits/Redis6Proxy.php',
+        'Symfony\\Component\\Cache\\Traits\\Redis6ProxyTrait' => __DIR__ . '/..' . '/symfony/cache/Traits/Redis6ProxyTrait.php',
         'Symfony\\Component\\Cache\\Traits\\RedisCluster5Proxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisCluster5Proxy.php',
         'Symfony\\Component\\Cache\\Traits\\RedisCluster6Proxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisCluster6Proxy.php',
+        'Symfony\\Component\\Cache\\Traits\\RedisCluster6ProxyTrait' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisCluster6ProxyTrait.php',
         'Symfony\\Component\\Cache\\Traits\\RedisClusterNodeProxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisClusterNodeProxy.php',
         'Symfony\\Component\\Cache\\Traits\\RedisClusterProxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisClusterProxy.php',
         'Symfony\\Component\\Cache\\Traits\\RedisProxy' => __DIR__ . '/..' . '/symfony/cache/Traits/RedisProxy.php',
@@ -2940,6 +2952,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'Theme_Language_Command' => __DIR__ . '/..' . '/wp-cli/language-command/src/Theme_Language_Command.php',
         'Theme_Mod_Command' => __DIR__ . '/..' . '/wp-cli/extension-command/src/Theme_Mod_Command.php',
         'TodoController' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/PEAR/Tests/Commenting/FileCommentUnitTest.2.inc',
+        'TraitFoo' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/src/Standards/Generic/Tests/CodeAnalysis/UselessOverridingMethodUnitTest.1.inc',
         'TraitName' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/File/GetDeclarationNameTest.inc',
         'TraitUse' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/File/GetMethodParametersTest.inc',
         'TraitWithNullableTypedConstants' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/tests/Core/Tokenizer/TypedConstantsTest.inc',
@@ -3182,6 +3195,7 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
         'WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\Libs\\YahnisElsts\\PluginUpdateChecker\\v5p4\\Vcs\\ThemeUpdateChecker' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/Puc/v5p4/Vcs/ThemeUpdateChecker.php',
         'WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\Libs\\YahnisElsts\\PluginUpdateChecker\\v5p4\\Vcs\\VcsCheckerMethods' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/Puc/v5p4/Vcs/VcsCheckerMethods.php',
         'WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\Libs\\YahnisElsts\\PluginUpdateChecker\\v5p4\\WpCliCheckTrigger' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/Puc/v5p4/WpCliCheckTrigger.php',
+        'WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\Main' => __DIR__ . '/../..' . '/Sources/Main.php',
         'WpOrgApiTest' => __DIR__ . '/..' . '/wp-cli/wp-cli/tests/WP_CLI/WpOrgApiTest.php',
         'WpOrg\\Requests\\Auth' => __DIR__ . '/..' . '/wp-cli/wp-cli/bundle/rmccue/requests/src/Auth.php',
         'WpOrg\\Requests\\Auth\\Basic' => __DIR__ . '/..' . '/wp-cli/wp-cli/bundle/rmccue/requests/src/Auth/Basic.php',
@@ -3345,10 +3359,10 @@ class ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit5889f0b6b1590289d1db2de1df1dafcf::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1dbe909ce483980c6880cf3a7a1f51cc::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1dbe909ce483980c6880cf3a7a1f51cc::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit1dbe909ce483980c6880cf3a7a1f51cc::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit1dbe909ce483980c6880cf3a7a1f51cc::$classMap;
 
         }, null, ClassLoader::class);
     }

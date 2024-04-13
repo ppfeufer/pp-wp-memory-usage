@@ -8,6 +8,7 @@
 namespace BrianHenryIE\Strauss\Tests\Issues;
 
 use BrianHenryIE\Strauss\Console\Commands\Compose;
+use BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -15,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @package BrianHenryIE\Strauss\Tests\Issues
  * @coversNothing
  */
-class StraussIssue80Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase
+class StraussIssue80Test extends IntegrationTestCase
 {
 
     /**
@@ -51,7 +52,7 @@ EOD;
 
         $result = $strauss->run($inputInterfaceMock, $outputInterfaceMock);
 
-        self::assertEquals(0, $result);
+        self::assertEqualsRN(0, $result);
 
         $php_string = file_get_contents($this->testsWorkingDir . 'vendor-prefixed/league/oauth2-linkedin/src/Provider/LinkedInResourceOwner.php');
         self::assertStringNotContainsString('class Issue_80_LinkedInResourceOwner extends GenericResourceOwner', $php_string);
@@ -121,7 +122,7 @@ EOD;
 
         $result = $strauss->run($inputInterfaceMock, $outputInterfaceMock);
 
-        self::assertEquals(0, $result);
+        self::assertEqualsRN(0, $result);
 
         $php_string = file_get_contents($this->testsWorkingDir . 'vendor-prefixed/google/apiclient/src/aliases.php');
         self::assertStringNotContainsString("'Company\\Project\\\Google\\\\Client' => 'Prefix_Google_Client',", $php_string);

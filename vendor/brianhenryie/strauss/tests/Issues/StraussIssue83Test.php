@@ -8,6 +8,7 @@
 namespace BrianHenryIE\Strauss\Tests\Issues;
 
 use BrianHenryIE\Strauss\Console\Commands\Compose;
+use BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -15,12 +16,10 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @package BrianHenryIE\Strauss\Tests\Issues
  * @coversNothing
  */
-class StraussIssue83Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase
+class StraussIssue83Test extends IntegrationTestCase
 {
     public function test_namespace_keyword_on_opening_line()
     {
-        self::markTestSkipped('Slow test.');
-
         $composerJsonString = <<<'EOD'
 {
   "name": "issue/83",
@@ -35,7 +34,13 @@ class StraussIssue83Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\In
 		    "/^((?!aws\\/aws-sdk-php).)*$/"
 		  ]
       }
-    }
+    },
+    "aws/aws-sdk-php": [
+        "S3"
+    ]
+  },
+  "scripts": {
+    "pre-autoload-dump": "Aws\\Script\\Composer\\Composer::removeUnusedServices"
   }
 }
 EOD;
@@ -53,7 +58,7 @@ EOD;
 
         $result = $strauss->run($inputInterfaceMock, $outputInterfaceMock);
 
-        self::assertEquals(0, $result);
+        self::assertEqualsRN(0, $result);
 
         $php_string = file_get_contents($this->testsWorkingDir . '/vendor-prefixed/aws/aws-sdk-php/src/ClientResolver.php');
 

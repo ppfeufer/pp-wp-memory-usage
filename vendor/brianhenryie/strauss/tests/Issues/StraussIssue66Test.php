@@ -8,6 +8,7 @@
 namespace BrianHenryIE\Strauss\Tests\Issues;
 
 use BrianHenryIE\Strauss\Console\Commands\Compose;
+use BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -15,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @package BrianHenryIE\Strauss\Tests\Issues
  * @coversNothing
  */
-class StraussIssue66Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase
+class StraussIssue66Test extends IntegrationTestCase
 {
 
     /**
@@ -53,12 +54,12 @@ EOD;
 
         $php_string = file_get_contents($this->testsWorkingDir . 'vendor-prefixed/wp-graphql/wp-graphql/src/WPGraphQL.php');
 
-        $this->assertStringContainsString('final class Prefix_WPGraphQL', $php_string);
+        self::assertStringContainsString('final class Prefix_WPGraphQL', $php_string);
 
         $php_string = file_get_contents($this->testsWorkingDir . 'vendor-prefixed/wp-graphql/wp-graphql/src/Registry/Utils/PostObject.php');
 
-        $this->assertStringNotContainsString('use MyProject\Dependencies\WPGraphQL;', $php_string);
+        self::assertStringNotContainsString('use MyProject\Dependencies\WPGraphQL;', $php_string);
 
-        $this->assertStringContainsString('use Prefix_WPGraphQL as WPGraphQL;', $php_string);
+        self::assertStringContainsString('use Prefix_WPGraphQL as WPGraphQL;', $php_string);
     }
 }

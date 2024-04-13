@@ -10,7 +10,7 @@ use BrianHenryIE\Strauss\Composer\ComposerPackage;
 use BrianHenryIE\Strauss\Composer\Extra\StraussConfig;
 use BrianHenryIE\Strauss\Licenser;
 use PHPUnit\Framework\Constraint\Callback;
-use PHPUnit\Framework\TestCase;
+use BrianHenryIE\Strauss\TestCase;
 use Symfony\Component\Finder\Finder;
 
 /**
@@ -60,7 +60,7 @@ class LicenserTest extends TestCase
         $result = $sut->getDiscoveredLicenseFiles();
 
         // Currently contains an array entry: /Users/brianhenry/Sites/mozart/mozart/tests/Unit/developer-name/project-name/license.md
-        $this->assertStringContainsString('developer-name/project-name/license.md', $result[0]);
+        self::assertStringContainsString('developer-name/project-name/license.md', $result[0]);
     }
 
     /**
@@ -110,7 +110,7 @@ EOD;
             'proprietary'
         );
 
-        $this->assertEquals($expected, $actual);
+        self::assertEqualsRN($expected, $actual);
     }
 
 
@@ -159,7 +159,7 @@ EOD;
             'proprietary'
         );
 
-        $this->assertEquals($expected, $actual);
+        self::assertEqualsRN($expected, $actual);
     }
 
     /**
@@ -199,7 +199,7 @@ EOD;
             'proprietary'
         );
 
-        $this->assertEquals($expected, $actual);
+        self::assertEqualsRN($expected, $actual);
     }
 
     /**
@@ -254,7 +254,7 @@ EOD;
             'GPL-2.0-or-later'
         );
 
-        $this->assertEquals($expected, $actual);
+        self::assertEqualsRN($expected, $actual);
     }
 
 
@@ -326,7 +326,7 @@ EOD;
             );
         }
 
-        $this->assertEquals($expected, $contents);
+        self::assertEqualsRN($expected, $contents);
     }
 
     /**
@@ -380,7 +380,7 @@ EOD;
             );
         }
 
-        $this->assertEquals($expected, $contents);
+        self::assertEqualsRN($expected, $contents);
     }
 
     /**
@@ -443,7 +443,7 @@ EOD;
             );
         }
 
-        $this->assertEquals($expected, $contents);
+        self::assertEqualsRN($expected, $contents);
     }
 
     /**
@@ -524,7 +524,7 @@ EOD;
             'MIT'
         );
 
-        $this->assertEquals($expected, $actual);
+        self::assertEqualsRN($expected, $actual);
     }
 
     /**
@@ -573,6 +573,6 @@ EOD;
             );
         }
 
-        $this->assertEquals($expected, $contents);
+        self::assertEqualsRN($expected, $contents);
     }
 }

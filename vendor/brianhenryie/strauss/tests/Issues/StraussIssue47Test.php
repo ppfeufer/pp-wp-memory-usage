@@ -11,9 +11,8 @@
 
 namespace BrianHenryIE\Strauss\Tests\Issues;
 
-use BrianHenryIE\Strauss\Composer\Extra\StraussConfig;
 use BrianHenryIE\Strauss\Console\Commands\Compose;
-use BrianHenryIE\Strauss\Prefixer;
+use BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -21,7 +20,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @package BrianHenryIE\Strauss\Tests\Issues
  * @coversNothing
  */
-class StraussIssue47Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase
+class StraussIssue47Test extends IntegrationTestCase
 {
 
     /*
@@ -68,12 +67,12 @@ EOD;
         $result = $strauss->run($inputInterfaceMock, $outputInterfaceMock);
 
         // 0 for no errors.
-        $this->assertNotEquals(1, $result);
+        self::assertNotEquals(1, $result);
 
         $php_string = file_get_contents($this->testsWorkingDir . 'strauss/dragon-public/framework/src/Form/TextArea.php');
 
-        $this->assertStringNotContainsString('namespace Dragon\Dependencies\Dragon\Dependencies\Dragon\Form;', $php_string);
-        $this->assertStringContainsString('namespace Dragon\Dependencies\Dragon\Form;', $php_string);
+        self::assertStringNotContainsString('namespace Dragon\Dependencies\Dragon\Dependencies\Dragon\Form;', $php_string);
+        self::assertStringContainsString('namespace Dragon\Dependencies\Dragon\Form;', $php_string);
     }
 
     /*
@@ -145,12 +144,12 @@ EOD;
         $result = $strauss->run($inputInterfaceMock, $outputInterfaceMock);
 
         // 0 for no errors.
-        $this->assertNotEquals(1, $result);
+        self::assertNotEquals(1, $result);
 
         $php_string = file_get_contents($this->testsWorkingDir . 'strauss/dragon-public/framework/src/Form/TextArea.php');
 
-        $this->assertStringNotContainsString('namespace Dragon\Dependencies\Dragon\Dependencies\Dragon\Form;', $php_string);
-        $this->assertStringContainsString('namespace Dragon\Dependencies\Dragon\Form;', $php_string);
+        self::assertStringNotContainsString('namespace Dragon\Dependencies\Dragon\Dependencies\Dragon\Form;', $php_string);
+        self::assertStringContainsString('namespace Dragon\Dependencies\Dragon\Form;', $php_string);
     }
 
     /**
@@ -202,11 +201,11 @@ EOD;
         $result = $strauss->run($inputInterfaceMock, $outputInterfaceMock);
 
         // 0 for no errors.
-        $this->assertNotEquals(1, $result);
+        self::assertNotEquals(1, $result);
 
         $php_string = file_get_contents($this->testsWorkingDir . 'strauss/dragon-public/framework/src/Form/TextArea.php');
 
-        $this->assertStringNotContainsString('namespace Dragon\Dependencies\Dragon\Dependencies\Dragon\Form;', $php_string);
-        $this->assertStringContainsString('namespace Dragon\Dependencies\Dragon\Form;', $php_string);
+        self::assertStringNotContainsString('namespace Dragon\Dependencies\Dragon\Dependencies\Dragon\Form;', $php_string);
+        self::assertStringContainsString('namespace Dragon\Dependencies\Dragon\Form;', $php_string);
     }
 }

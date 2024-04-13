@@ -7,9 +7,8 @@
 
 namespace BrianHenryIE\Strauss\Tests\Issues;
 
-use BrianHenryIE\Strauss\Composer\Extra\StraussConfig;
 use BrianHenryIE\Strauss\Console\Commands\Compose;
-use BrianHenryIE\Strauss\Prefixer;
+use BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -17,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @package BrianHenryIE\Strauss\Tests\Issues
  * @coversNothing
  */
-class StraussIssue34Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\IntegrationTestCase
+class StraussIssue34Test extends IntegrationTestCase
 {
 
     public function test_no_double_prefix_after_second_run()
@@ -32,7 +31,7 @@ class StraussIssue34Test extends \BrianHenryIE\Strauss\Tests\Integration\Util\In
     ]
   },
   "require": {
-    "psr/log": "*"
+    "psr/log": "1"
   },
   "extra": {
     "strauss": {
@@ -68,13 +67,13 @@ EOD;
         // Run TWICE!
         $strauss->run($inputInterfaceMock, $outputInterfaceMock);
         $result = $strauss->run($inputInterfaceMock, $outputInterfaceMock);
-        $this->assertNotEquals(1, $result);
+        self::assertNotEquals(1, $result);
 
         $project_file_php_string = file_get_contents($this->testsWorkingDir . 'src/library.php');
         self::assertStringNotContainsString('use Psr\Log\LoggerInterface', $project_file_php_string);
         self::assertStringContainsString('use BrianHenryIE\Strauss\Psr\Log\LoggerInterface', $project_file_php_string);
 
-        $project_file_php_string = file_get_contents($this->testsWorkingDir . 'vendor/psr/log/src/LoggerInterface.php');
+        $project_file_php_string = file_get_contents($this->testsWorkingDir . 'vendor/psr/log/Psr/Log/LoggerInterface.php');
         self::assertStringNotContainsString('namespace Psr\Log;', $project_file_php_string);
         self::assertStringContainsString('namespace BrianHenryIE\Strauss\Psr\Log;', $project_file_php_string);
     }

@@ -14,7 +14,7 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
-define('PP_WP_MEMORY_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define(constant_name: 'PP_WP_MEMORY_PLUGIN_DIR', value: plugin_dir_path(file: __FILE__));
 
 require_once trailingslashit(value: __DIR__) . 'Sources/autoloader.php';
 require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Removed
+
+- `vendor` directory from the plugin again, as its no longer needed
+
 ## \[1.5.2\] - 2024-03-12
 
 ### Changed

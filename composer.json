@@ -1,6 +1,6 @@
 {
-    "name": "ppfeufer/pp-wp-basic-security",
-    "description": "WordPress Basic Security - A simple WordPress security plugin - Removing non-needed stuff from the HTML Output",
+    "name": "ppfeufer/pp-wp-memory-usage",
+    "description": "WordPress Memory Usage - A simple plugin to display the current memory usage in the admin footer.",
     "authors": [
         {
             "name": "Peter Pfeufer",

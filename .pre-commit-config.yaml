@@ -33,7 +33,8 @@ exclude: |
     css/libs/|
     .vscode/|
     .idea/|
-    vendor/
+    vendor/|
+    ISSUE_TEMPLATE/
   )
 
 # pre-commit setup

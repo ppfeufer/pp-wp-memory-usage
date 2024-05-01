@@ -6,7 +6,7 @@
  * Version: 1.6.2
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
- * License: GPLv2
+ * License: GPLv3
  * Text Domain: pp-wp-memory-usage
  * Domain Path: /l10n
  */

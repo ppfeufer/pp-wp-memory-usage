@@ -3,47 +3,17 @@
 # Default goal and help message for the Makefile
 .DEFAULT_GOAL := help
 
-wp_cli = /usr/local/bin/wp-cli
-wp_path = ./../../../../WP-Sources
-
 plugin_name = WordPress Memory Usage
 plugin_slug = pp-wp-memory-usage
 
-help:
-	@echo "$(plugin_name) Makefile"
+# Help message for the Makefile
+help::
+	@echo "$(FONT_BOLD)$(plugin_name)$(FONT_BOLD_END) Makefile"
 	@echo ""
-	@echo "Usage: make [command]"
+	@echo "$(FONT_BOLD)Usage:$(FONT_BOLD_END)"
+	@echo "  make [command]"
 	@echo ""
-	@echo "Commands:"
-	@echo "  activate           Activate the plugin"
-	@echo "  clear-transient    Clear all transient caches"
-	@echo "  deactivate         Deactivate the plugin"
-	@echo "  pot                Create the plugin .pot file"
-	@echo "  pre-commit-checks  Run pre-commit checks"
+	@echo "$(FONT_BOLD)Commands:$(FONT_BOLD_END)"
 
-activate:
-	$(wp_cli) plugin activate \
-		$(plugin_slug) \
-		--path=$(wp_path)
-
-deactivate:
-	$(wp_cli) plugin deactivate \
-		$(plugin_slug) \
-		--path=$(wp_path)
-
-pot:
-	$(wp_cli) i18n make-pot \
-		. \
-		l10n/$(plugin_slug).pot \
-		--slug=$(plugin_slug) \
-		--domain=$(plugin_slug) \
-		--include="/"
-
-clear-transient:
-	$(wp_cli) transient delete \
-		--all \
-		--path=$(wp_path)
-
-pre-commit-checks:
-	@echo "Running pre-commit checks"
-	pre-commit run --all-files
+# Include the configurations
+include .make/conf.d/*.mk

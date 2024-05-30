@@ -7,6 +7,7 @@ plugin_name = WordPress Memory Usage
 plugin_slug = pp-wp-memory-usage
 
 # Help message for the Makefile
+.PHONY: help
 help::
 	@echo "$(TEXT_BOLD)$(plugin_name)$(TEXT_BOLD_END) Makefile"
 	@echo ""

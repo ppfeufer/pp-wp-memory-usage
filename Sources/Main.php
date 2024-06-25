@@ -147,7 +147,7 @@ class Main {
     public function doUpdateCheck(): void {
         PucFactory::buildUpdateChecker(
             metadataUrl: 'https://github.com/ppfeufer/pp-wp-memory-usage/',
-            fullPath: PP_WP_MEMORY_PLUGIN_DIR . 'MemoryUsage.php',
+            fullPath: PLUGIN_DIR . 'MemoryUsage.php',
             slug: 'pp-wp-memory-usage'
         )->getVcsApi()->enableReleaseAssets();
     }

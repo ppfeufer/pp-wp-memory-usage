@@ -15,7 +15,7 @@ namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
 define(
-    constant_name: __NAMESPACE__ . '\PP_WP_MEMORY_PLUGIN_DIR',
+    constant_name: __NAMESPACE__ . '\PLUGIN_DIR',
     value: plugin_dir_path(file: __FILE__)
 );
 

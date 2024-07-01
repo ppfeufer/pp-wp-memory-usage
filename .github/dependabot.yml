@@ -17,7 +17,7 @@ updates:
     target-branch: "master"
     versioning-strategy: increase
     groups:
-      dependencies:
+      "NPM Dependencies":
         update-types:
           - "major"
           - "minor"
@@ -34,7 +34,7 @@ updates:
     target-branch: "master"
     versioning-strategy: increase
     groups:
-      dependencies:
+      "Composer Dependencies":
         update-types:
           - "major"
           - "minor"

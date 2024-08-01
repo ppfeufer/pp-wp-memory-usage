@@ -1,9 +1,4 @@
 <?php
-/**
- * @license MIT
- *
- * Modified using {@see https://github.com/BrianHenryIE/strauss}.
- */
 
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p4;
 

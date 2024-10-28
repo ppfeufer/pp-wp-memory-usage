@@ -5,6 +5,7 @@
 
 plugin_name = WordPress Memory Usage
 plugin_slug = pp-wp-memory-usage
+plugin_file = MemoryUsage.php
 
 # Help message for the Makefile
 .PHONY: help

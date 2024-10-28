@@ -22,7 +22,9 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 > Critical content demanding immediate user attention due to potential risks.
 -->
 
-## \[In Development\] – Unreleased
+## Changes in Chronological Order
+
+### \[In Development\] – Unreleased
 
 <!--
 Section Order:
@@ -35,84 +37,87 @@ Section Order:
 ### Security
 -->
 
-### Changed
+### \[1.6.3\] - 2024-10-28
+
+#### Changed
 
 - Put constants under our namespace to avoid potential conflicts
+- Tested compatibility to WordPress 6.7
 
-## \[1.6.2\] - 2024-04-13
+### \[1.6.2\] - 2024-04-13
 
-### Changed
+#### Changed
 
 - Autoloading refactored
 
-## \[1.6.1\] - 2024-04-13
+### \[1.6.1\] - 2024-04-13
 
-### Changed
+#### Changed
 
 - Translations updated
 
-## \[1.6.0\] - 2024-04-13
+### \[1.6.0\] - 2024-04-13
 
-### Removed
+#### Removed
 
 - `vendor` directory from the plugin again, as its no longer needed
 
-## \[1.5.2\] - 2024-03-12
+### \[1.5.2\] - 2024-03-12
 
-### Changed
+#### Changed
 
 - Translations updated
 
-## \[1.5.1\] - 2024-03-08
+### \[1.5.1\] - 2024-03-08
 
-### Added
+#### Added
 
 - Apparently, we have to add the whole vendor directory to the plugin for the
   autoloader to work properly. This is a bit of a pain, but seems to be the only way.
 
-## \[1.5.0\] - 2024-03-01
+### \[1.5.0\] - 2024-03-01
 
-### Changed
+#### Changed
 
 - Using [strauss](https://github.com/BrianHenryIE/strauss) to include our dependencies in the plugin's namespace
 
-## \[1.4.1\] - 2024-02-23
+### \[1.4.1\] - 2024-02-23
 
-### Changed
+#### Changed
 
 - Updates to linting and automated code style checks
 
-## \[1.4.0\] - 2024-02-19
+### \[1.4.0\] - 2024-02-19
 
-### Added
+#### Added
 
 - Memory usage information to the admin bar
 
-## \[1.3.1\] - 2023-10-03
+### \[1.3.1\] - 2023-10-03
 
-### Changed
+#### Changed
 
 - Available translations updated
 
-## \[1.3.0\] - 2023-09-15
+### \[1.3.0\] - 2023-09-15
 
-### Fixed
+#### Fixed
 
 - Plugin namespace
 
-## \[1.2.0\] - 2023-09-15
+### \[1.2.0\] - 2023-09-15
 
-### Changed
+#### Changed
 
 - Integrate PluginUpdateChecker into our namespace
 
-### Removed
+#### Removed
 
 - Redundant argument
 
-## \[1.1.0\] - 2023-09-12
+### \[1.1.0\] - 2023-09-12
 
-### Added
+#### Added
 
 - New GitHub updater library for hopefully better results
 - pre-commit checks

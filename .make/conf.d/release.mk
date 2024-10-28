@@ -1,3 +1,15 @@
+# Prepare a new release
+.PHONY: prepare-release
+prepare-release: pot
+	@echo ""
+	@echo "Preparing a release"
+	@echo "===================="
+	@read -p "New Version Number: " new_version; \
+	sed -i "/ * @version /c\ * @version $$new_version" $(plugin_file); \
+	sed -i "/ * Version: /c\ * Version: $$new_version" $(plugin_file); \
+	echo "Updated version in $(TEXT_BOLD)$(plugin_file)$(TEXT_BOLD_END)"; \
+	echo "Please update the changelog in $(TEXT_BOLD)CHANGELOG.md$(TEXT_BOLD_END)"
+
 # Create a new release archive
 .PHONY: release-archive
 release-archive:
@@ -19,6 +31,7 @@ release-archive:
 .PHONY: help
 help::
 	@echo "  $(TEXT_UNDERLINE)Release:$(TEXT_UNDERLINE_END)"
+	@echo "    prepare-release           Prepare a new release."
 	@echo "    release-archive           Create a release archive."
 	@echo "                              The release archive ($(plugin_slug).zip) will be created in the root"
 	@echo "                              directory of the plugin."

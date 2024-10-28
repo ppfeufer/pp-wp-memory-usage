@@ -3,7 +3,7 @@ Contributors: ppfeufer
 Donate link: https://ko-fi.com/ppfeufer
 Tags: memory, memory_usage
 Requires at least: 6.0
-Tested up to: 6.5
+Tested up to: 6.7
 Requires PHP: 8.2
 License: GPLv3 or later
 License URI: https://github.com/ppfeufer/pp-wp-memory-usage/blob/master/LICENSE

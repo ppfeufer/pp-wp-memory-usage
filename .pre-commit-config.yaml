@@ -113,18 +113,18 @@ repos:
           - --report=full
 
   - repo: https://github.com/eslint/eslint
-    rev: v9.12.0
+    rev: v9.14.0
     hooks:
       - id: eslint
         name: ESLint
         description: This hook checks for problems in JavaScript code.
 #        additional_dependencies:
 #          # eslint itself needs to be here when using additional_dependencies.
-#          - eslint@9.4.0  # https://github.com/eslint/eslint/releases/latest
-#          - globals@15.3.0  # https://github.com/sindresorhus/globals/releases/latest
+#          - eslint@9.14.0  # https://github.com/eslint/eslint/releases/latest
+#          - globals@15.12.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.9.0
+    rev: v16.10.0
     hooks:
       - id: stylelint
         name: Stylelint
@@ -133,7 +133,7 @@ repos:
           - --formatter=compact
         additional_dependencies:
           # stylelint itself needs to be here when using additional_dependencies.
-          - stylelint@16.9.0  # https://github.com/stylelint/stylelint/releases/latest
+          - stylelint@16.10.0  # https://github.com/stylelint/stylelint/releases/latest
           - stylelint-config-standard@36.0.1  # https://github.com/stylelint/stylelint-config-standard/releases/latest
 #          - stylelint-config-standard-scss@13.0.0  # https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/latest
 
@@ -145,18 +145,18 @@ repos:
         description: This hook checks for compliance with definitions made in EditorConfig files.
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.17
+    rev: 0.7.18
     hooks:
       - id: mdformat
         name: Mdformat
         description: This hook checks for Markdown formatting issues.
         additional_dependencies:  # https://mdformat.readthedocs.io/en/stable/users/plugins.html#code-formatter-plugins
-          - mdformat-gfm==0.3.6  # Mdformat plugin for GitHub Flavored Markdown compatibility » https://github.com/hukkin/mdformat-gfm/tags
+          - mdformat-gfm==0.3.7  # Mdformat plugin for GitHub Flavored Markdown compatibility » https://github.com/hukkin/mdformat-gfm/tags
           - mdformat-toc==0.3.0  # Mdformat plugin to generate a table of contents » https://github.com/hukkin/mdformat-toc/tags
-          - mdformat-shfmt==0.1.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
+          - mdformat-shfmt==0.2.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.3
+    rev: 0.29.4
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions

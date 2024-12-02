@@ -4,7 +4,7 @@ namespace YahnisElsts\PluginUpdateChecker\v5;
 
 if ( !class_exists(PucFactory::class, false) ):
 
-	class PucFactory extends \WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p4\PucFactory {
+	class PucFactory extends \WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory {
 	}
 
 endif;

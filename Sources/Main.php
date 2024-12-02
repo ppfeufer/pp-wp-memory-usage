@@ -2,7 +2,7 @@
 
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
-use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p4\PucFactory;
+use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
 use WP_Admin_Bar;
 
 class Main {

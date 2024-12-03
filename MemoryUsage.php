@@ -28,14 +28,22 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
+// Plugin directory path
 define(
-    constant_name: __NAMESPACE__ . '\PLUGIN_DIR',
+    constant_name: __NAMESPACE__ . '\PLUGIN_DIR_PATH',
     value: plugin_dir_path(file: __FILE__)
 );
 
+// Plugin directory relative path
+define(
+    constant_name: __NAMESPACE__ . '\PLUGIN_REL_PATH',
+    value: dirname(plugin_basename(__FILE__))
+);
+
+// Include the autoloader and the libraries autoloader
 require_once trailingslashit(value: __DIR__) . 'Sources/autoloader.php';
 require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
 // phpcs:enable
 
 // Load the plugin's main class.
-(new Main())->init();
+new Main();

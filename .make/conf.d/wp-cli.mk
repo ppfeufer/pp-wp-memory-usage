@@ -35,6 +35,7 @@ pot:
 		l10n/$(plugin_slug).pot \
 		--slug=$(plugin_slug) \
 		--domain=$(plugin_slug) \
+		--headers='{"Report-Msgid-Bugs-To":"$(plugin_issues_url)"}' \
 		--include="/"
 
 # Start the WP-CLI shell

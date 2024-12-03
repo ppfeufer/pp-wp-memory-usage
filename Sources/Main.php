@@ -5,60 +5,45 @@ namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
 use WP_Admin_Bar;
 
+/**
+ * Main class
+ *
+ * @package WordPress\Ppfeufer\Plugin\WpMemoryUsage
+ */
 class Main {
     /**
      * @var array $memory The memory data
-     * @since 1.0.0
      * @access protected
      */
     protected array $memory = [];
 
     /**
+     * Main constructor
+     *
+     * @access public
+     */
+    public function __construct() {
+        $this->init();
+    }
+
+    /**
      * Initialize the class
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function init(): void {
-        $this->loadTextDomain();
         $this->getMemoryLimit();
         $this->getMemoryUsage();
         $this->getMemoryPercentage();
         $this->doUpdateCheck();
-
-        if (is_admin()) {
-            $this->addAdminHooks();
-        }
-
-        add_action(
-            hook_name: 'admin_bar_menu',
-            callback: [$this, 'addAdminBarInfo'],
-            priority: 999
-        );
-    }
-
-    /**
-     * Loading the text domain
-     *
-     * @return void
-     * @since 1.0.0
-     * @access public
-     */
-    public function loadTextDomain(): void {
-        if (function_exists(function: 'load_plugin_textdomain')) {
-            load_plugin_textdomain(
-                domain: 'pp-wp-memory-usage',
-                plugin_rel_path: basename(path: __DIR__) . '/l10n/'
-            );
-        }
+        $this->initializeHooks();
     }
 
     /**
      * Get memory limit
      *
      * @return void
-     * @since 1.0.0
      * @access private
      */
     private function getMemoryLimit(): void {
@@ -73,7 +58,6 @@ class Main {
      * Get memory usage
      *
      * @return void
-     * @since 1.0.0
      * @access private
      */
     private function getMemoryUsage(): void {
@@ -92,7 +76,6 @@ class Main {
      * Get memory percentage
      *
      * @return void
-     * @since 1.0.0
      * @access private
      */
     private function getMemoryPercentage(): void {
@@ -113,14 +96,10 @@ class Main {
                 ) * 100
             );
 
-            /**
-             * If the bar is too small, we move the text outside
-             */
+            // If the bar is too small, we move the text outside.
             $this->memory['percent_pos'] = '';
 
-            /**
-             * In case we are in our limits, take the admin color
-             */
+            // In case we are in our limits, take the admin color.
             $this->memory['color'] = '';
 
             if ($this->memory['percent'] > 80) {
@@ -141,37 +120,55 @@ class Main {
      * Check GitHub for updates
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function doUpdateCheck(): void {
         PucFactory::buildUpdateChecker(
             metadataUrl: 'https://github.com/ppfeufer/pp-wp-memory-usage/',
-            fullPath: PLUGIN_DIR . 'MemoryUsage.php',
+            fullPath: PLUGIN_DIR_PATH . 'MemoryUsage.php',
             slug: 'pp-wp-memory-usage'
         )->getVcsApi()->enableReleaseAssets();
     }
 
     /**
-     * Add the admin hooks
+     * Initialize the hooks
      *
      * @return void
-     * @since 1.0.0
      * @access private
      */
-    private function addAdminHooks(): void {
+    private function initializeHooks(): void {
+        // Load the text domain.
+        add_action(hook_name: 'init', callback: static function () {
+            load_plugin_textdomain(
+                domain: 'pp-wp-memory-usage',
+                plugin_rel_path: PLUGIN_REL_PATH . '/l10n/'
+            );
+        });
+
+        // Add the admin bar info
         add_action(
-            hook_name: 'wp_dashboard_setup',
-            callback: [$this, 'addDashboardWidget']
+            hook_name: 'admin_bar_menu',
+            callback: [$this, 'addAdminBarInfo'],
+            priority: 999
         );
-        add_filter(hook_name: 'admin_footer_text', callback: [$this, 'addFooter']);
+
+        // Add the admin hooks
+        if (is_admin()) {
+            // Add the dashboard widget
+            add_action(
+                hook_name: 'wp_dashboard_setup',
+                callback: [$this, 'addDashboardWidget']
+            );
+
+            // Add the footer text
+            add_filter(hook_name: 'admin_footer_text', callback: [$this, 'addFooter']);
+        }
     }
 
     /**
      * Render the dashboard widget
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function renderDashboardWidget(): void {
@@ -187,7 +184,7 @@ class Main {
                     /
                     <?php
                     echo sprintf(
-                    /* Translators: %1$s is the bit size of the operating system (32 or 64-bit) */
+                        /* Translators: %1$s is the bit size of the operating system (32 or 64-bit) */
                         __('%1$s Bit Operating System', 'pp-wp-memory-usage'),
                         PHP_INT_SIZE * 8
                     );
@@ -216,7 +213,9 @@ class Main {
         if (!empty($this->memory['percent'])) {
             ?>
             <div class="progressbar">
-                <div style="border: 1px solid rgb(223 223 223); background-color: rgb(249 249 249); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px;">
+                <div
+                    style="border: 1px solid rgb(223 223 223); background-color: rgb(249 249 249); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px;"
+                >
                     <div
                         class="button-primary"
                         style="width: <?php echo $this->memory['percent']; ?>%; <?php echo $this->memory['color']; ?> padding: 0; border-width: 0; color: rgb(255 255 255); text-align: right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;"
@@ -235,7 +234,6 @@ class Main {
      * Add the widget to the dashboard
      *
      * @return void
-     * @since 1.0.0
      * @access public
      */
     public function addDashboardWidget(): void {
@@ -254,7 +252,6 @@ class Main {
      *
      * @param string $content The current footer content
      * @return string
-     * @since 1.0.0
      * @access public
      */
     public function addFooter(string $content): string {
@@ -267,12 +264,11 @@ class Main {
      * Get the memory usage string
      *
      * @return string
-     * @since 1.4.1
      * @access private
      */
     private function getMemoryUsageString(): string {
         return sprintf(
-        /* Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage */
+            /* Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage. */
             __(
                 'Memory Usage: %1$s of %2$s (%3$s%%)',
                 'pp-wp-memory-usage'
@@ -288,7 +284,6 @@ class Main {
      *
      * @param WP_Admin_Bar $wpAdminBar The admin bar instance
      * @return void
-     * @since 1.4.1
      * @access public
      */
     public function addAdminBarInfo(WP_Admin_Bar $wpAdminBar): void {

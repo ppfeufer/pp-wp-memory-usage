@@ -7,6 +7,10 @@ plugin_name = WordPress Memory Usage
 plugin_slug = pp-wp-memory-usage
 plugin_file = MemoryUsage.php
 
+# Git repository URLs
+plugin_repo_url = https://github.com/ppfeufer/${plugin_slug}
+plugin_issues_url = $(plugin_repo_url)/issues
+
 # Help message for the Makefile
 .PHONY: help
 help::

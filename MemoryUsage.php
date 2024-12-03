@@ -41,8 +41,8 @@ define(
 );
 
 // Include the autoloader and the libraries autoloader
-require_once trailingslashit(value: __DIR__) . 'Sources/autoloader.php';
-require_once trailingslashit(value: __DIR__) . 'Sources/Libs/autoload.php';
+require_once PLUGIN_DIR_PATH . 'Sources/autoloader.php';
+require_once PLUGIN_DIR_PATH . 'Sources/Libs/autoload.php';
 // phpcs:enable
 
 // Load the plugin's main class.

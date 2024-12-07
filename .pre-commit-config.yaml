@@ -1,11 +1,12 @@
 # Apply to all files without committing:
 #   pre-commit run --all-files
 # Update this file:
-#   pre-commit autoupdate
+#   pre-commit autoupdate --freeze
 
+# Set the default language versions for the hooks
 default_language_version:
-  python: python3
-  node: 22.4.1
+  python: python3  # Force all Python hooks to use Python 3
+  node: 22.4.1  # Force all Node hooks to use Node 22.4.1
 
 # https://pre-commit.ci/
 ci:
@@ -40,7 +41,7 @@ exclude: |
 # pre-commit setup
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b  # frozen: v5.0.0
     hooks:
       # Identify invalid files
       - id: check-yaml
@@ -96,7 +97,7 @@ repos:
         description: This hook ensures that files end with a newline.
 
   - repo: https://github.com/digitalpulp/pre-commit-php.git
-    rev: 1.4.0
+    rev: f9f30f819d34faa2375e7000822efab0ef677200  # frozen: 1.4.0
     hooks:
       - id: php-lint-all
         name: PHP Lint (All)
@@ -113,7 +114,7 @@ repos:
           - --report=full
 
   - repo: https://github.com/eslint/eslint
-    rev: v9.16.0
+    rev: de2b7986929c5a92de076e4381b8bb05440e78c2  # frozen: v9.16.0
     hooks:
       - id: eslint
         name: ESLint
@@ -125,7 +126,7 @@ repos:
 #          - globals@15.13.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.11.0
+    rev: 29cc51ef83ff0b4aaf74595268e022873015bd9b  # frozen: v16.11.0
     hooks:
       - id: stylelint
         name: Stylelint
@@ -140,14 +141,14 @@ repos:
 #          - stylelint-config-standard-scss@13.0.0  # https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/latest
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.0.3
+    rev: 1a92c0953500d402fc49ceb67ad7fbf7cabad38a  # frozen: 3.0.3
     hooks:
       - id: editorconfig-checker
         name: EditorConfig Checker
         description: This hook checks for compliance with definitions made in EditorConfig files.
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.19
+    rev: 00812cd1850e41aae5c0916645b4b7404f538e8c  # frozen: 0.7.19
     hooks:
       - id: mdformat
         name: Mdformat
@@ -158,7 +159,7 @@ repos:
           - mdformat-shfmt==0.2.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.30.0
+    rev: cb3c2be894b151dff143b1baf6acbd55f2b7faed  # frozen: 0.30.0
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions

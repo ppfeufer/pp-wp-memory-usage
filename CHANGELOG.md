@@ -37,6 +37,8 @@ Section Order:
 ### Security
 -->
 
+### [1.7.0] - 2024-12-09
+
 ### Changed
 
 - Code optimized

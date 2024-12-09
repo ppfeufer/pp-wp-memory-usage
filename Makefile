@@ -3,9 +3,11 @@
 # Default goal and help message for the Makefile
 .DEFAULT_GOAL := help
 
+# Plugin name and slug
 plugin_name = WordPress Memory Usage
 plugin_slug = pp-wp-memory-usage
 plugin_file = MemoryUsage.php
+plugin_translation_template = l10n/$(plugin_slug).pot
 
 # Git repository URLs
 plugin_repo_url = https://github.com/ppfeufer/${plugin_slug}

@@ -37,6 +37,11 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Code optimized
+- Widget code moved to its own template file
+
 ### [1.6.3] - 2024-10-28
 
 #### Changed

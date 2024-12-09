@@ -2,6 +2,8 @@
 
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
+use Exception;
+use RuntimeException;
 use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
 use WP_Admin_Bar;
 
@@ -172,61 +174,40 @@ class Main {
      * @access public
      */
     public function renderDashboardWidget(): void {
-        ?>
-        <ul>
-            <li>
-                <strong>
-                    <?php _e('PHP Version', 'pp-wp-memory-usage'); ?>:
-                </strong>
+        $templateFile = 'Sources/Templates/dashboard-widget.php';
 
-                <span>
-                    <?php echo PHP_VERSION; ?>
-                    /
-                    <?php
-                    echo sprintf(
-                        /* Translators: %1$s is the bit size of the operating system (32 or 64-bit) */
-                        __('%1$s Bit Operating System', 'pp-wp-memory-usage'),
-                        PHP_INT_SIZE * 8
-                    );
-                    ?>
-                </span>
-            </li>
+        $this->loadTemplate($templateFile, ['memory' => $this->memory]);
+    }
 
-            <li>
-                <strong>
-                    <?php _e('Memory Limit', 'pp-wp-memory-usage'); ?>:
-                </strong>
-
-                <span><?php echo $this->memory['limit']; ?></span>
-            </li>
-
-            <li>
-                <strong>
-                    <?php _e('Memory Usage', 'pp-wp-memory-usage'); ?>:
-                </strong>
-
-                <span><?php echo $this->memory['usage']; ?></span>
-            </li>
-        </ul>
-
-        <?php
-        if (!empty($this->memory['percent'])) {
-            ?>
-            <div class="progressbar">
-                <div
-                    style="border: 1px solid rgb(223 223 223); background-color: rgb(249 249 249); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px;"
-                >
-                    <div
-                        class="button-primary"
-                        style="width: <?php echo $this->memory['percent']; ?>%; <?php echo $this->memory['color']; ?> padding: 0; border-width: 0; color: rgb(255 255 255); text-align: right; border-color: rgb(223 223 223); box-shadow: 0 1px 0 rgb(255 255 255) inset; border-radius: 3px; margin-top: -1px; cursor: default;"
-                    >
-                        <div style="padding: 2px; <?php echo $this->memory['percent_pos']; ?>"><?php echo $this->memory['percent']; ?>
-                            %
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php
+    /**
+     * Load a plugin template file
+     *
+     * Usage:
+     * ```
+     * $args = ['var' => $this->var];
+     * $templateFile = 'Sources/Templates/templatefile.php';
+     * $this->loadTemplate($templateFile, $args);
+     * ```
+     *
+     * @param string $templateFile The template file to load (Relative to the plugin directory)
+     * @param array $args The arguments to pass to the template. Available in the template as `$args`
+     * @return void
+     * @access private
+     */
+    private function loadTemplate(string $templateFile, array $args = []): void {
+        try {
+            if (file_exists(filename: PLUGIN_DIR_PATH . $templateFile)) {
+                load_template(
+                    _template_file: PLUGIN_DIR_PATH . $templateFile,
+                    args: $args
+                );
+            } else {
+                throw new RuntimeException(
+                    message: "Template file for dashboard widget not found at {$templateFile}"
+                );
+            }
+        } catch (Exception $e) {
+            error_log($e->getMessage());
         }
     }
 
@@ -268,7 +249,7 @@ class Main {
      */
     private function getMemoryUsageString(): string {
         return sprintf(
-            /* Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage. */
+        /* Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage. */
             __(
                 'Memory Usage: %1$s of %2$s (%3$s%%)',
                 'pp-wp-memory-usage'

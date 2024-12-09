@@ -39,7 +39,7 @@ Section Order:
 
 ### [1.7.0] - 2024-12-09
 
-### Changed
+#### Changed
 
 - Code optimized
 - Widget code moved to its own template file

@@ -14,8 +14,9 @@ use RuntimeException;
  * @package WordPress\Ppfeufer\Plugin\WpMemoryUsage
  */
 spl_autoload_register(callback: static function (string $className): void {
-    // Check if the class name starts with the base namespace
-    if (!str_starts_with($className, __NAMESPACE__)) {
+    // Check if the class name starts with the base namespace or includes `Libs' in the path
+    if (!str_starts_with(haystack: $className, needle: __NAMESPACE__)
+        || str_contains(haystack: $className, needle: '\Libs')) {
         return;
     }
 

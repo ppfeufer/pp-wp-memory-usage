@@ -41,7 +41,11 @@ spl_autoload_register(callback: static function (string $className): void {
             include_once $file;
         } else {
             throw new RuntimeException(
-                "Autoloader error: Class file for {$className} not found at {$file}"
+                sprintf(
+                    'Autoloader error: Class file for %1$s not found at %2$s',
+                    $className,
+                    $file
+                )
             );
         }
     } catch (Exception $e) {

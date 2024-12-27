@@ -127,7 +127,7 @@ class Main {
     public function doUpdateCheck(): void {
         PucFactory::buildUpdateChecker(
             metadataUrl: 'https://github.com/ppfeufer/pp-wp-memory-usage/',
-            fullPath: PLUGIN_DIR_PATH . 'MemoryUsage.php',
+            fullPath: PLUGIN_DIR_PATH . '/MemoryUsage.php',
             slug: 'pp-wp-memory-usage'
         )->getVcsApi()->enableReleaseAssets();
     }
@@ -143,7 +143,7 @@ class Main {
         add_action(hook_name: 'init', callback: static function () {
             load_plugin_textdomain(
                 domain: 'pp-wp-memory-usage',
-                plugin_rel_path: PLUGIN_REL_PATH . '/l10n/'
+                plugin_rel_path: PLUGIN_REL_PATH . '/l10n'
             );
         });
 
@@ -196,9 +196,9 @@ class Main {
      */
     private function loadTemplate(string $templateFile, array $args = []): void {
         try {
-            if (file_exists(filename: PLUGIN_DIR_PATH . $templateFile)) {
+            if (file_exists(filename: PLUGIN_DIR_PATH . DIRECTORY_SEPARATOR . $templateFile)) {
                 load_template(
-                    _template_file: PLUGIN_DIR_PATH . $templateFile,
+                    _template_file: PLUGIN_DIR_PATH . DIRECTORY_SEPARATOR . $templateFile,
                     args: $args
                 );
             } else {

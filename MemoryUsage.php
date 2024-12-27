@@ -28,21 +28,67 @@
 namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
-// Plugin directory path
+
+/**
+ * Constants should be namespace-aware.
+ *
+ * Constants defined via `define()` are not namespaced by default
+ * and need to be namespaced manually.
+ *
+ * Constants defined via `const` are namespaced by default and
+ * don't need any special treatment.
+ *
+ * Example:
+ * Namespaced constant definition via `define()`:
+ * ```
+ * define(constant_name: __NAMESPACE__ . '\CONSTANT_NAME', value: 'value');
+ * ```
+ */
+
+/**
+ * Plugin basename
+ */
 define(
-    constant_name: __NAMESPACE__ . '\PLUGIN_DIR_PATH',
-    value: plugin_dir_path(file: __FILE__)
+    constant_name: __NAMESPACE__ . '\PLUGIN_BASENAME',
+    value: plugin_basename(file: __FILE__)
 );
 
-// Plugin directory relative path
+/**
+ * Plugin directory path relative to wp-content/plugins (without trailing slash)
+ */
 define(
     constant_name: __NAMESPACE__ . '\PLUGIN_REL_PATH',
-    value: dirname(plugin_basename(__FILE__))
+    value: dirname(PLUGIN_BASENAME)
 );
 
-// Include the autoloader and the libraries autoloader
-require_once PLUGIN_DIR_PATH . 'Sources/autoloader.php';
-require_once PLUGIN_DIR_PATH . 'Sources/Libs/autoload.php';
+/**
+ * Plugin directory URL (with trailing slash)
+ */
+define(
+    constant_name: __NAMESPACE__ . '\PLUGIN_DIR_URL',
+    value: plugin_dir_url(file: __FILE__)
+);
+
+/**
+ * Plugin directory path (without trailing slash)
+ */
+const PLUGIN_DIR_PATH = __DIR__;
+
+/**
+ * Plugin source path (without trailing slash)
+ */
+const PLUGIN_SOURCE_PATH = PLUGIN_DIR_PATH . '/Sources';
+
+/**
+ * Plugin library path (without trailing slash)
+ */
+const PLUGIN_LIBRARY_PATH = PLUGIN_SOURCE_PATH . '/Libs';
+
+// Include the plugin autoloader
+require_once PLUGIN_SOURCE_PATH . '/autoload.php';
+
+// Include the library autoloader
+require_once PLUGIN_LIBRARY_PATH . '/autoload.php';
 // phpcs:enable
 
 // Load the plugin's main class.

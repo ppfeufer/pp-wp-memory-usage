@@ -1,7 +1,7 @@
 <?php
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\DebugBar;
+namespace Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\DebugBar;
 
-use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\UpdateChecker;
+use Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\UpdateChecker;
 
 if ( !class_exists(Panel::class, false) && class_exists('Debug_Bar_Panel', false) ):
 

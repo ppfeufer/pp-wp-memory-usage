@@ -2,7 +2,7 @@
 /**
  * Dashboard Widget Template
  *
- * @package    WordPress\Ppfeufer\Plugin\WpMemoryUsage
+ * @package    Ppfeufer\Plugin\WpMemoryUsage
  * @subpackage Sources/Templates
  */
 

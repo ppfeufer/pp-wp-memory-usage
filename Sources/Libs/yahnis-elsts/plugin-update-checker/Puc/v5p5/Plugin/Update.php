@@ -1,7 +1,7 @@
 <?php
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Plugin;
+namespace Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Plugin;
 
-use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Update as BaseUpdate;
+use Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Update as BaseUpdate;
 
 if ( !class_exists(Update::class, false) ):
 

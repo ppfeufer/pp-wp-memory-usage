@@ -1,5 +1,5 @@
 <?php
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5;
+namespace Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5;
 
 if ( !class_exists(OAuthSignature::class, false) ):
 

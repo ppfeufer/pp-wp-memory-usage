@@ -1,13 +1,13 @@
 <?php
 
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
+namespace Ppfeufer\Plugin\WpMemoryUsage;
 
 use Exception;
 use RuntimeException;
 
 // Register the autoloader.
 // phpcs:disable
-spl_autoload_register(callback: '\WordPress\Ppfeufer\Plugin\WpMemoryUsage\autoload');
+spl_autoload_register(callback: '\Ppfeufer\Plugin\WpMemoryUsage\autoload');
 // phpcs:enable
 
 /**
@@ -16,7 +16,7 @@ spl_autoload_register(callback: '\WordPress\Ppfeufer\Plugin\WpMemoryUsage\autolo
  *
  * @param string $className The name of the class to load
  * @return void
- * @package WordPress\Ppfeufer\Plugin\WpMemoryUsage
+ * @package Ppfeufer\Plugin\WpMemoryUsage
  */
 function autoload(string $className): void {
     // Check if the class name starts with the base namespace or includes `Libs' in the path

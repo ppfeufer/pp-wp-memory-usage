@@ -1,9 +1,9 @@
 <?php
 
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5;
+namespace Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5;
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory as MajorFactory;
-use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory as MinorFactory;
+use Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory as MinorFactory;
 
 require __DIR__ . '/Puc/v5p5/Autoloader.php';
 new Autoloader();
@@ -31,4 +31,3 @@ foreach (
 	//was already defined by another, older version of the update checker.
 	MinorFactory::addVersion($pucGeneralClass, $pucVersionedClass, '5.5');
 }
-

@@ -1,5 +1,5 @@
 <?php
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Plugin;
+namespace Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Plugin;
 
 if ( !class_exists(Ui::class, false) ):
 	/**

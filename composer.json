@@ -19,7 +19,7 @@
     "extra": {
         "strauss": {
             "target_directory": "Sources/Libs",
-            "namespace_prefix": "WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\Libs\\",
+            "namespace_prefix": "Ppfeufer\\Plugin\\WpMemoryUsage\\Libs\\",
             "include_modified_date": false,
             "include_author": false
         }
@@ -45,7 +45,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WordPress\\Ppfeufer\\Plugin\\WpMemoryUsage\\": "Sources"
+            "Ppfeufer\\Plugin\\WpMemoryUsage\\": "Sources"
         },
         "classmap": [
             "vendor"

@@ -1,16 +1,16 @@
 <?php
 
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
+namespace Ppfeufer\Plugin\WpMemoryUsage;
 
 use Exception;
 use RuntimeException;
-use WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
+use Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
 use WP_Admin_Bar;
 
 /**
  * Main class
  *
- * @package WordPress\Ppfeufer\Plugin\WpMemoryUsage
+ * @package Ppfeufer\Plugin\WpMemoryUsage
  */
 class Main {
     /**

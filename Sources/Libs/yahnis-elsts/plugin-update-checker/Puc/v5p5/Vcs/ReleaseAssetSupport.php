@@ -1,6 +1,6 @@
 <?php
 
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Vcs;
+namespace Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\Vcs;
 
 if ( !trait_exists(ReleaseAssetSupport::class, false) ) :
 

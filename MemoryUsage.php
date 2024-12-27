@@ -25,7 +25,7 @@
  * License URI: https://github.com/ppfeufer/pp-wp-memory-usage/blob/master/LICENSE
  */
 
-namespace WordPress\Ppfeufer\Plugin\WpMemoryUsage;
+namespace Ppfeufer\Plugin\WpMemoryUsage;
 
 // phpcs:disable
 

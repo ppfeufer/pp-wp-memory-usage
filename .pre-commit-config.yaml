@@ -114,7 +114,7 @@ repos:
           - --report=full
 
   - repo: https://github.com/eslint/eslint
-    rev: de2b7986929c5a92de076e4381b8bb05440e78c2  # frozen: v9.16.0
+    rev: 3d8028abdbdbc6c59ff6b86c5fe26755db26ee6a  # frozen: v9.17.0
     hooks:
       - id: eslint
         name: ESLint
@@ -126,7 +126,7 @@ repos:
 #          - globals@15.13.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: 29cc51ef83ff0b4aaf74595268e022873015bd9b  # frozen: v16.11.0
+    rev: 22b126a247292d1efc39bc8d475f4abdddfa713f  # frozen: v16.12.0
     hooks:
       - id: stylelint
         name: Stylelint
@@ -148,7 +148,7 @@ repos:
         description: This hook checks for compliance with definitions made in EditorConfig files.
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 00812cd1850e41aae5c0916645b4b7404f538e8c  # frozen: 0.7.19
+    rev: e20b1ac5acb8aba0b49d3a9109c6e6b58684ee83  # frozen: 0.7.21
     hooks:
       - id: mdformat
         name: Mdformat

@@ -114,7 +114,7 @@ repos:
           - --report=full
 
   - repo: https://github.com/eslint/eslint
-    rev: 3d8028abdbdbc6c59ff6b86c5fe26755db26ee6a  # frozen: v9.17.0
+    rev: 66b0d0d0841c83f8c7b600246e94a7a76ed77ca6  # frozen: v9.19.0
     hooks:
       - id: eslint
         name: ESLint
@@ -126,7 +126,7 @@ repos:
 #          - globals@15.14.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: 22b126a247292d1efc39bc8d475f4abdddfa713f  # frozen: v16.12.0
+    rev: adbd5eb765476b51bf2d2621a7492053153a4d06  # frozen: v16.14.1
     hooks:
       - id: stylelint
         name: Stylelint
@@ -141,14 +141,14 @@ repos:
 #          - stylelint-config-standard-scss@14.0.0  # https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/latest
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 1a92c0953500d402fc49ceb67ad7fbf7cabad38a  # frozen: 3.0.3
+    rev: c764d820bfc7d772ae9cc86b4696c375aee944a4  # frozen: 3.2.0
     hooks:
       - id: editorconfig-checker
         name: EditorConfig Checker
         description: This hook checks for compliance with definitions made in EditorConfig files.
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: e20b1ac5acb8aba0b49d3a9109c6e6b58684ee83  # frozen: 0.7.21
+    rev: ff29be1a1ba8029d9375882aa2c812b62112a593  # frozen: 0.7.22
     hooks:
       - id: mdformat
         name: Mdformat
@@ -159,7 +159,7 @@ repos:
           - mdformat-shfmt==0.2.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: cb3c2be894b151dff143b1baf6acbd55f2b7faed  # frozen: 0.30.0
+    rev: a20fe80ebdd4aec6791598c9ff559985580f91ea  # frozen: 0.31.1
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions

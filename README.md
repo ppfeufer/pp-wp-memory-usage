@@ -8,22 +8,30 @@ Adds a little widget with the current memory usage to the dashboard.
 
 ______________________________________________________________________
 
-<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
+<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=2 -->
 
-- [PP WP Memory Usage](#pp-wp-memory-usage)
-  - [Minimum Requirements](#minimum-requirements)
-  - [Translation Status](#translation-status)
+- [Installation](#installation)
+- [Minimum Requirements](#minimum-requirements)
+- [Translation Status](#translation-status)
 
 <!-- mdformat-toc end -->
 
 ______________________________________________________________________
 
-### Minimum Requirements<a name="minimum-requirements"></a>
+## Installation<a name="installation"></a>
+
+- Download the [latest version](https://github.com/ppfeufer/pp-wp-memory-usage/releases/latest/download/pp-wp-memory-usage.zip).
+- Go to your WordPress admin area and navigate to `Plugins` → `Add New`.
+- Click on `Upload Plugin` and select the downloaded ZIP file.
+- Click on `Install Now` and then on `Activate`.
+- Done!
+
+## Minimum Requirements<a name="minimum-requirements"></a>
 
 - WordPress 6.0
 - PHP 8.2
 
-### Translation Status<a name="translation-status"></a>
+## Translation Status<a name="translation-status"></a>
 
 [![Translation status](https://weblate.ppfeufer.de/widget/wordpress-plugins/pp-wp-memory-usage/multi-auto.svg)](https://weblate.ppfeufer.de/engage/wordpress-plugins/)
 

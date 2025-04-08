@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "yahnis-elsts/plugin-update-checker": "5.5"
+        "yahnis-elsts/plugin-update-checker": "^5.5"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",

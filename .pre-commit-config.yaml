@@ -114,7 +114,7 @@ repos:
           - --report=full
 
   - repo: https://github.com/eslint/eslint
-    rev: 9f8178610fb6fbdb8f6c7bb9b15ec30bb2b138bc  # frozen: v9.26.0
+    rev: e81ba92a6d86968cacab5d06f83a7c9b154e5906  # frozen: v9.28.0
     hooks:
       - id: eslint
         name: ESLint
@@ -126,7 +126,7 @@ repos:
           - globals@16.1.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: c273c0d42ec19f7c368cae6702dbc9da3becaa5c  # frozen: v16.19.1
+    rev: 2aae575fddbe3f26961115860542dbd9d0e8f91d  # frozen: v16.20.0
     hooks:
       - id: stylelint
         name: Stylelint

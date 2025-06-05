@@ -37,17 +37,23 @@ Section Order:
 ### Security
 -->
 
+### [1.8.1] - 2025-06-05
+
+#### Changed
+
+- Translations updated
+
 ### [1.8.0] - 2024-12-27
 
-### Fixed
+#### Fixed
 
 - Ignore `/Libs` in our own autoloader
 
-### Changed
+#### Changed
 
 - Make the autoloader namespace-aware
 
-### Removed
+#### Removed
 
 - Unnecessary trailing slashes
 - `Wordpress` part from the namespace

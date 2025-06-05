@@ -1,28 +1,27 @@
 # Copyright (C) 2024 H. Peter Pfeufer
 # This file is distributed under the GPLv2.
 # Peter Pfeufer <info@ppfeufer.de>, 2024.
+# s0k0l -_- <salarysalo@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage 1.5.0\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/pp-wp-memory-usage/issues\n"
-"POT-Creation-Date: 2024-12-09T03:52:16+00:00\n"
-"PO-Revision-Date: 2024-04-13 10:30+0000\n"
-"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/wordpress-"
-"plugins/pp-wp-memory-usage/uk/>\n"
+"POT-Creation-Date: 2025-06-05T07:43:09+00:00\n"
+"PO-Revision-Date: 2025-04-13 12:24+0000\n"
+"Last-Translator: s0k0l -_- <salarysalo@gmail.com>\n"
+"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/wordpress-plugins/pp-wp-memory-usage/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.4.3\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.10.4\n"
 "X-Domain: pp-wp-memory-usage\n"
 
 #. Plugin Name of the plugin
 #: MemoryUsage.php
 msgid "WordPress Memory Usage"
-msgstr ""
+msgstr "Використання пам'яті Водрпресом"
 
 #. Plugin URI of the plugin
 #: MemoryUsage.php
@@ -31,10 +30,8 @@ msgstr "https://github.com/ppfeufer/pp-wp-memory-usage"
 
 #. Description of the plugin
 #: MemoryUsage.php
-msgid ""
-"Display the memory limit and current memory usage in the dashboard and admin "
-"footer"
-msgstr ""
+msgid "Display the memory limit and current memory usage in the dashboard and admin footer"
+msgstr "Показати ліміт та поточне використання пам'яті в дашборді та адміністративному футері"
 
 #. Author of the plugin
 #: MemoryUsage.php
@@ -48,34 +45,36 @@ msgstr "https://ppfeufer.de"
 
 #: Sources/Main.php:55 Sources/Main.php:73
 msgid "N/A"
-msgstr ""
+msgstr "не доступне"
 
 #: Sources/Main.php:56 Sources/Main.php:74
 msgid " MB"
-msgstr ""
+msgstr " Мбайт"
 
 #: Sources/Main.php:223
 msgid "Memory Usage Overview"
-msgstr ""
+msgstr "Огляд використання пам'яті"
 
 #. Translators: %1$s: Current memory usage, %2$s: Memory limit, %3$s: Current memory usage percentage.
 #: Sources/Main.php:253
+#, php-format
 msgid "Memory Usage: %1$s of %2$s (%3$s%%)"
-msgstr ""
+msgstr "Пам'ять: %1$s з %2$s (%3$s%%)"
 
 #: Sources/Templates/dashboard-widget.php:19
 msgid "PHP Version"
-msgstr ""
+msgstr "Версія PHP"
 
 #. Translators: %1$s is the bit size of the operating system (32 or 64-bit)
 #: Sources/Templates/dashboard-widget.php:28
+#, php-format
 msgid "%1$s Bit Operating System"
-msgstr ""
+msgstr "%1$s біт операційної системи"
 
 #: Sources/Templates/dashboard-widget.php:37
 msgid "Memory Limit"
-msgstr ""
+msgstr "Ліміт пам'яті"
 
 #: Sources/Templates/dashboard-widget.php:45
 msgid "Memory Usage"
-msgstr ""
+msgstr "Використання пам'яті"

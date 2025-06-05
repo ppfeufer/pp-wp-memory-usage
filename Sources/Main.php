@@ -4,7 +4,7 @@ namespace Ppfeufer\Plugin\WpMemoryUsage;
 
 use Exception;
 use RuntimeException;
-use Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p5\PucFactory;
+use Ppfeufer\Plugin\WpMemoryUsage\Libs\YahnisElsts\PluginUpdateChecker\v5p6\PucFactory;
 use WP_Admin_Bar;
 
 /**

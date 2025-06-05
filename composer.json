@@ -48,7 +48,7 @@
             "Ppfeufer\\Plugin\\WpMemoryUsage\\": "Sources"
         },
         "classmap": [
-            "Sources/Libs"
+            "vendor"
         ]
     }
 }

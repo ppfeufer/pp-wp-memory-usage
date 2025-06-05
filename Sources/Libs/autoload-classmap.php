@@ -5,9 +5,6 @@
 $strauss_src = dirname(__FILE__);
 
 return array(
-   'Ppfeufer\Plugin\WpMemoryUsage\Libs\Composer\Autoload\ClassLoader' => $strauss_src . '/composer/ClassLoader.php',
-   'Ppfeufer\Plugin\WpMemoryUsage\Libs\Composer\Autoload\ComposerStaticInit1d01ad890c70ce765f73cf1bf1c39642' => $strauss_src . '/composer/autoload_static.php',
-   'ComposerAutoloaderInit1d01ad890c70ce765f73cf1bf1c39642' => $strauss_src . '/composer/autoload_real.php',
    'PucReadmeParser' => $strauss_src . '/yahnis-elsts/plugin-update-checker/vendor/PucReadmeParser.php',
    'Parsedown' => $strauss_src . '/yahnis-elsts/plugin-update-checker/vendor/ParsedownModern.php',
    'YahnisElsts\PluginUpdateChecker\v5\PucFactory' => $strauss_src . '/yahnis-elsts/plugin-update-checker/Puc/v5/PucFactory.php',

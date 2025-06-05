@@ -140,12 +140,12 @@ class Main {
      */
     private function initializeHooks(): void {
         // Load the text domain.
-        add_action(hook_name: 'init', callback: static function () {
-            load_plugin_textdomain(
-                domain: 'pp-wp-memory-usage',
-                plugin_rel_path: PLUGIN_REL_PATH . '/l10n'
-            );
-        });
+//        add_action(hook_name: 'init', callback: static function () {
+//            load_plugin_textdomain(
+//                domain: 'pp-wp-memory-usage',
+//                plugin_rel_path: PLUGIN_REL_PATH . '/l10n'
+//            );
+//        });
 
         // Add the admin bar info
         add_action(

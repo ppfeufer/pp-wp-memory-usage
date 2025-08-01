@@ -41,6 +41,11 @@ updates:
           - "patch"
     schedule:
       interval: "monthly"
+    # Ignore specific dependencies
+    ignore:
+      # Pin `brianhenryie/strauss` to a specific max version
+      - dependency-name: "brianhenryie/strauss"
+        versions: [">0.21.1"]
     commit-message:
       # Prefix all commit messages with "[composer] "
       prefix: "[composer] "

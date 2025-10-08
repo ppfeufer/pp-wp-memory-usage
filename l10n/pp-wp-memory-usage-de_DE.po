@@ -1,12 +1,12 @@
 # Copyright (C) 2024 H. Peter Pfeufer
 # This file is distributed under the GPLv2.
-# Peter Pfeufer <info@ppfeufer.de>, 2024.
+# Peter Pfeufer <info@ppfeufer.de>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage 1.5.0\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/pp-wp-memory-usage/issues\n"
-"POT-Creation-Date: 2025-06-05T07:43:09+00:00\n"
-"PO-Revision-Date: 2024-04-13 10:30+0000\n"
+"POT-Creation-Date: 2025-10-08T05:29:35+00:00\n"
+"PO-Revision-Date: 2025-10-02 13:44+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-plugins/pp-wp-memory-usage/de/>\n"
 "Language: de_DE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4.3\n"
+"X-Generator: Weblate 5.13.3\n"
 "X-Domain: pp-wp-memory-usage\n"
 
 #. Plugin Name of the plugin

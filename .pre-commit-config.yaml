@@ -114,7 +114,7 @@ repos:
           - --report=full
 
   - repo: https://github.com/eslint/eslint
-    rev: c081400644df15454b0ae1a2db03fcfbdfd27621  # frozen: v10.0.0-beta.0
+    rev: v9.39.2
     hooks:
       - id: eslint
         name: ESLint
@@ -122,8 +122,8 @@ repos:
         language: node
         additional_dependencies:
           # eslint itself needs to be here when using additional_dependencies.
-          - eslint@9.39.1  # https://github.com/eslint/eslint/releases/latest
-          - globals@16.5.0  # https://github.com/sindresorhus/globals/releases/latest
+          - eslint@9.39.2 # https://github.com/eslint/eslint/releases/latest
+          - globals@17.0.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: 5550a364f2b5d3a9e731a9f4e231c5dc8c5f2e5b  # frozen: v16.26.1

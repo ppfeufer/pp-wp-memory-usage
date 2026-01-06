@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage 1.5.0\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/pp-wp-memory-usage/issues\n"
-"POT-Creation-Date: 2025-10-08T05:29:35+00:00\n"
-"PO-Revision-Date: 2025-09-06 05:08+0000\n"
+"POT-Creation-Date: 2026-01-06T10:35:25+00:00\n"
+"PO-Revision-Date: 2025-11-16 08:30+0000\n"
 "Last-Translator: s0k0l -_- <salarysalo@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/wordpress-plugins/pp-wp-memory-usage/uk/>\n"
 "Language: uk\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.13\n"
+"X-Generator: Weblate 5.14.3\n"
 "X-Domain: pp-wp-memory-usage\n"
 
 #. Plugin Name of the plugin
 #: MemoryUsage.php
 msgid "WordPress Memory Usage"
-msgstr "Використання пам'яті Водрпресом"
+msgstr "Використання пам'яті Вордпресом"
 
 #. Plugin URI of the plugin
 #: MemoryUsage.php
@@ -45,11 +45,11 @@ msgstr "https://ppfeufer.de"
 
 #: Sources/Main.php:55 Sources/Main.php:73
 msgid "N/A"
-msgstr "не доступне"
+msgstr "Н/Д"
 
 #: Sources/Main.php:56 Sources/Main.php:74
 msgid " MB"
-msgstr " Мбайт"
+msgstr " МБайт"
 
 #: Sources/Main.php:223
 msgid "Memory Usage Overview"

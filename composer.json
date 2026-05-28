@@ -1,5 +1,6 @@
 {
     "name": "ppfeufer/pp-wp-memory-usage",
+    "version": "1.8.3",
     "description": "WordPress Memory Usage - A simple plugin to display the current memory usage in the admin footer.",
     "authors": [
         {

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Memory Usage 1.5.0\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/pp-wp-memory-usage/issues\n"
-"POT-Creation-Date: 2026-01-06T10:35:25+00:00\n"
+"POT-Creation-Date: 2026-05-31T19:11:52+00:00\n"
 "PO-Revision-Date: 2025-11-16 08:30+0000\n"
 "Last-Translator: s0k0l -_- <salarysalo@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/wordpress-plugins/pp-wp-memory-usage/uk/>\n"
@@ -19,27 +19,27 @@ msgstr ""
 "X-Domain: pp-wp-memory-usage\n"
 
 #. Plugin Name of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:14
 msgid "WordPress Memory Usage"
 msgstr "Використання пам'яті Вордпресом"
 
 #. Plugin URI of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:15
 msgid "https://github.com/ppfeufer/pp-wp-memory-usage"
 msgstr "https://github.com/ppfeufer/pp-wp-memory-usage"
 
 #. Description of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:16
 msgid "Display the memory limit and current memory usage in the dashboard and admin footer"
 msgstr "Показати ліміт та поточне використання пам'яті в дашборді та адміністративному футері"
 
 #. Author of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:20
 msgid "H. Peter Pfeufer"
 msgstr "H. Peter Pfeufer"
 
 #. Author URI of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:21
 msgid "https://ppfeufer.de"
 msgstr "https://ppfeufer.de"
 

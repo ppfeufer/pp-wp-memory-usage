@@ -9,33 +9,33 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-06T10:35:25+00:00\n"
+"POT-Creation-Date: 2026-05-31T19:11:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pp-wp-memory-usage\n"
 
 #. Plugin Name of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:14
 msgid "WordPress Memory Usage"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:15
 msgid "https://github.com/ppfeufer/pp-wp-memory-usage"
 msgstr ""
 
 #. Description of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:16
 msgid "Display the memory limit and current memory usage in the dashboard and admin footer"
 msgstr ""
 
 #. Author of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:20
 msgid "H. Peter Pfeufer"
 msgstr ""
 
 #. Author URI of the plugin
-#: MemoryUsage.php
+#: MemoryUsage.php:21
 msgid "https://ppfeufer.de"
 msgstr ""
 

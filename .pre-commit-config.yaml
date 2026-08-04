@@ -6,7 +6,7 @@
 # Set the default language versions for the hooks
 default_language_version:
   python: python3  # Force all Python hooks to use Python 3
-  node: 22.13.1  # Force all Node hooks to use the latest Node LTS
+  node: 26.3.0  # Force all Node hooks to use this specific Node version
 
 # https://pre-commit.ci/
 ci:
@@ -113,8 +113,10 @@ repos:
           - --colors
           - --report=full
 
-  - repo: https://github.com/eslint/eslint
-    rev: v10.8.0
+  #  - repo: https://github.com/eslint/eslint
+  #    rev: 9089853a593d6c7c0f11367da08a829e0ddfe092  # frozen: v10.6.0
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: eb9cff43594f41e8fc47ce8d1964a4500f26493c  # frozen: v10.8.0
     hooks:
       - id: eslint
         name: ESLint
@@ -122,8 +124,8 @@ repos:
         language: node
         additional_dependencies:
           # eslint itself needs to be here when using additional_dependencies.
-          - eslint@9.39.2 # https://github.com/eslint/eslint/releases/latest
-          - globals@17.0.0  # https://github.com/sindresorhus/globals/releases/latest
+          - eslint@10.8.0 # https://github.com/eslint/eslint/releases/latest
+          - globals@17.8.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: c04e74b560392d1602e683cfacff9ad134738f49  # frozen: v17.14.1
@@ -136,8 +138,8 @@ repos:
           - --formatter=compact
         additional_dependencies:
           # stylelint itself needs to be here when using additional_dependencies.
-          - stylelint@16.26.1  # https://github.com/stylelint/stylelint/releases/latest
-          - stylelint-config-standard@39.0.1  # https://github.com/stylelint/stylelint-config-standard/releases/latest
+          - stylelint@17.14.1  # https://github.com/stylelint/stylelint/releases/latest
+          - stylelint-config-standard@40.0.0  # https://github.com/stylelint/stylelint-config-standard/releases/latest
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
     rev: 3aa28ce11a84d747c5695ad10b81945f2400b54f  # frozen: 3.8.0

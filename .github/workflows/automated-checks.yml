@@ -1,7 +1,7 @@
 name: Automated Checks
 
 env:
-  NODE_VERSION: 24 # [LTS] End of Life: 30 Apr 2028 (https://endoflife.date/nodejs)
+  NODE_VERSION: 26 # [LTS] End of Life: 30 Apr 2029 (https://endoflife.date/nodejs)
 
 on:
   push:

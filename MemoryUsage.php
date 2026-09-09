@@ -75,6 +75,11 @@ define(
 const PLUGIN_DIR_PATH = __DIR__;
 
 /**
+ * Plugin slug
+ */
+const PLUGIN_SLUG = 'pp-wp-memory-usage';
+
+/**
  * Plugin source path (without trailing slash)
  */
 const PLUGIN_SOURCE_PATH = PLUGIN_DIR_PATH . '/Sources';

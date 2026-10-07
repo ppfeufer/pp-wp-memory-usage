@@ -16,7 +16,7 @@
  * Description: Display the memory limit and current memory usage in the dashboard and admin footer
  * Version: 1.8.3
  * Requires at least: 6.0
- * Requires PHP: 8.2
+ * Requires PHP: 8.4
  * Author: H. Peter Pfeufer
  * Author URI: https://ppfeufer.de
  * Text Domain: pp-wp-memory-usage

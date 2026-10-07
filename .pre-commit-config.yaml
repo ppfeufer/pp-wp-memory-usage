@@ -45,56 +45,56 @@ repos:
     hooks:
       # Identify invalid files
       - id: check-yaml
-        name: Check YAML
-        description: This hook checks that your YAML is parseable.
+        name: check-yaml (YAML)
+        description: Check for syntax errors in YAML files.
 
       - id: check-json
-        name: Check JSON
-        description: This hook checks that your JSON is parseable.
+        name: check-json (JSON)
+        description: Check for syntax errors in JSON files.
 
       - id: check-xml
-        name: Check XML
-        description: This hook checks that your XML is parseable.
+        name: check-xml (XML)
+        description: Check for syntax errors in XML files.
 
       # git checks
       - id: check-merge-conflict
-        name: Check Merge Conflict
-        description: This hook checks for files that contain merge conflict strings.
+        name: Check for merge conflict strings
+        description: Check for files that contain merge conflict strings.
 
       - id: check-added-large-files
-        name: Check Added Large Files
-        description: This hook checks for large files that have been added to the repository.
+        name: Check for large files
+        description: Check for large files that were added to the repository.
         args:
-          - --maxkb=1000
+          - --maxkb=2048  # 2 MB
 
       - id: detect-private-key
-        name: Detect Private Key
-        description: This hook detects private keys.
+        name: Detect private key
+        description: Check for private keys in the repository.
 
       - id: check-case-conflict
-        name: Check Case Conflict
-        description: This hook checks for files with names that differ only in case.
+        name: Check for case conflicts
+        description: Check for files with names that differ only in case.
 
       # General quality checks
       - id: mixed-line-ending
-        name: Mixed Line Ending
-        description: This hook checks for files that have mixed line endings.
+        name: Mixed line ending
+        description: Check for mixed line endings.
         args:
           - --fix=lf
 
       - id: trailing-whitespace
-        name: Trailing Whitespace
-        description: This hook removes trailing whitespace.
+        name: Trailing whitespace
+        description: Check for trailing whitespace.
         args:
           - --markdown-linebreak-ext=md
 
       - id: check-executables-have-shebangs
-        name: Check Executables Have Shebangs
-        description: This hook checks that all executable files have a shebang.
+        name: Check for shebangs in executables
+        description: Check that executables have shebangs.
 
       - id: end-of-file-fixer
-        name: End of File Fixer
-        description: This hook ensures that files end with a newline.
+        name: End of file fixer
+        description: Ensure that files end with a newline.
 
   - repo: https://github.com/digitalpulp/pre-commit-php.git
     rev: f9f30f819d34faa2375e7000822efab0ef677200  # frozen: 1.4.0
@@ -113,8 +113,6 @@ repos:
           - --colors
           - --report=full
 
-  #  - repo: https://github.com/eslint/eslint
-  #    rev: 9089853a593d6c7c0f11367da08a829e0ddfe092  # frozen: v10.6.0
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: 10e29bbf6681d33cb90d555ea2f7ea71e162d259  # frozen: v10.12.0
     hooks:
@@ -124,8 +122,8 @@ repos:
         language: node
         additional_dependencies:
           # eslint itself needs to be here when using additional_dependencies.
-          - eslint@10.10.0 # https://github.com/eslint/eslint/releases/latest
-          - globals@17.12.0  # https://github.com/sindresorhus/globals/releases/latest
+          - eslint@10.12.0 # https://github.com/eslint/eslint/releases/latest
+          - globals@17.13.0 # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: a43d64a23287d2dc2e02289bd3b2cb0da5eddfb1  # frozen: v17.16.0
@@ -138,7 +136,7 @@ repos:
           - --formatter=compact
         additional_dependencies:
           # stylelint itself needs to be here when using additional_dependencies.
-          - stylelint@17.15.0  # https://github.com/stylelint/stylelint/releases/latest
+          - stylelint@17.16.0  # https://github.com/stylelint/stylelint/releases/latest
           - stylelint-config-standard@40.0.0  # https://github.com/stylelint/stylelint-config-standard/releases/latest
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
@@ -146,15 +144,15 @@ repos:
     hooks:
       - id: editorconfig-checker
         name: EditorConfig Checker
-        description: This hook checks for compliance with definitions made in EditorConfig files.
+        description: Check for compliance with the definitions in the EditorConfig file.
 
   - repo: https://github.com/executablebooks/mdformat
     rev: 2d496dbc18e31b83a1596685347ffe0b6041daf0  # frozen: 1.0.0
     hooks:
       - id: mdformat
         name: Mdformat
-        description: This hook checks for Markdown formatting issues.
-        additional_dependencies:  # https://mdformat.readthedocs.io/en/stable/users/plugins.html#code-formatter-plugins
+        description: Format Markdown files.
+        additional_dependencies:
           - mdformat-gfm==1.0.0  # Mdformat plugin for GitHub Flavored Markdown compatibility » https://github.com/hukkin/mdformat-gfm/tags
           - mdformat-toc==0.5.0  # Mdformat plugin to generate a table of contents » https://github.com/hukkin/mdformat-toc/tags
           - mdformat-shfmt==0.2.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags

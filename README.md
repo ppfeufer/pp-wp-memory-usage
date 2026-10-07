@@ -29,7 +29,7 @@ ______________________________________________________________________
 ## Minimum Requirements<a name="minimum-requirements"></a>
 
 - WordPress 6.0
-- PHP 8.2
+- PHP 8.4
 
 ## Translation Status<a name="translation-status"></a>
 

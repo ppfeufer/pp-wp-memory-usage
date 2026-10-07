@@ -1,6 +1,6 @@
 {
     "name": "@ppfeufer/pp-wp-memory-usage",
-    "version": "1.8.3",
+    "version": "1.9.0",
     "type": "module",
     "devDependencies": {
         "@eslint/js": "^10.0.1",

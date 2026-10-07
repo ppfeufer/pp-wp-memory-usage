@@ -7,8 +7,12 @@ prepare-release: pot
 	@read -p "New Version Number: " new_version; \
 	sed -i "/ * @version /c\ * @version $$new_version" $(plugin_file); \
 	sed -i "/ * Version: /c\ * Version: $$new_version" $(plugin_file); \
+	# Update the version in package.json and rebuild node modules \
+	sed -i -E "\|\"version\"\: |s|\"\: .*|\"\: \"$$new_version\",|g" package.json; \
+	rm -rf node_modules; \
+#	rm package-lock.json; \
+	npm install; \
 	echo "Updated version in $(TEXT_BOLD)$(plugin_file)$(TEXT_BOLD_END)"; \
-	sed -i "/\"version\": /c\    \"version\": \"$$new_version\"," composer.json; \
 	sed -i "/\"Project-Id-Version: $(plugin_name) /c\\\"Project-Id-Version: $(plugin_name) $$new_version\\\n\"" $(plugin_translation_template); \
 	echo "Please update the changelog in $(TEXT_BOLD)CHANGELOG.md$(TEXT_BOLD_END)"
 

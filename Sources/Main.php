@@ -142,7 +142,7 @@ class Main {
         // Load the text domain.
 //        add_action(hook_name: 'init', callback: static function () {
 //            load_plugin_textdomain(
-//                domain: 'pp-wp-memory-usage',
+//                domain: PLUGIN_SLUG,
 //                plugin_rel_path: PLUGIN_REL_PATH . '/l10n'
 //            );
 //        });

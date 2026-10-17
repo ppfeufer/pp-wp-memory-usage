@@ -1,3 +1,8 @@
 /node_modules*
 /vendor*
 /pp-wp-memory-usage.zip
+
+/*.min.css
+/*.min.css.map
+/*.min.js
+/*.min.js.map

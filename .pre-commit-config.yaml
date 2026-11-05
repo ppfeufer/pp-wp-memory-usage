@@ -122,11 +122,11 @@ repos:
         language: node
         additional_dependencies:
           # eslint itself needs to be here when using additional_dependencies.
-          - eslint@10.12.0 # https://github.com/eslint/eslint/releases/latest
-          - globals@17.13.0 # https://github.com/sindresorhus/globals/releases/latest
+          - eslint@10.14.0 # https://github.com/eslint/eslint/releases/latest
+          - globals@17.14.0 # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: bacbac2f275dc567b794653e730860ce646040d3  # frozen: v18.0.0-next.0
+    rev: a43d64a23287d2dc2e02289bd3b2cb0da5eddfb1  # frozen: v17.16.0
     hooks:
       - id: stylelint
         name: Stylelint
